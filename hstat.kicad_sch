@@ -6001,28 +6001,38 @@
 				)
 			)
 		)
-		(symbol "Sensor:BME280"
+		(symbol "Sensor_Humidity:HDC1080"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at -8.89 11.43 0)
+				(at -6.35 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "BME280"
-				(at 7.62 11.43 0)
+			(property "Value" "HDC1080"
+				(at 3.81 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering"
-				(at 38.1 -11.43 0)
+			(property "Footprint" "Package_SON:Texas_PWSON-N6"
+				(at -1.27 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/hdc1080.pdf"
+				(at -10.16 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -6030,16 +6040,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf"
-				(at 0 -5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "3-in-1 sensor, humidity, pressure, temperature, I2C and SPI interface, 1.71-3.6V, LGA-8"
+			(property "Description" "Low Power,High Accuracy Digital Humidity Sensor with Temperature Sensor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -6048,7 +6049,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "Bosch pressure humidity temperature environment environmental measurement digital"
+			(property "ki_keywords" "Temperature Humidity Sensor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -6057,7 +6058,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "*LGA*2.5x2.5mm*P0.65mm*Clockwise*"
+			(property "ki_fp_filters" "Package*SON:Texas*PWSON*N6*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -6066,10 +6067,10 @@
 					(hide yes)
 				)
 			)
-			(symbol "BME280_0_1"
+			(symbol "HDC1080_0_1"
 				(rectangle
-					(start -10.16 10.16)
-					(end 10.16 -10.16)
+					(start -7.62 5.08)
+					(end 5.08 -5.08)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -6079,11 +6080,11 @@
 					)
 				)
 			)
-			(symbol "BME280_1_1"
-				(pin power_in line
-					(at -2.54 -15.24 90)
-					(length 5.08)
-					(name "GND"
+			(symbol "HDC1080_1_1"
+				(pin bidirectional line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "SDA"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6098,10 +6099,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at 15.24 -7.62 180)
-					(length 5.08)
-					(name "CSB"
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 2.54)
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6116,10 +6117,10 @@
 						)
 					)
 				)
-				(pin bidirectional line
-					(at 15.24 -2.54 180)
-					(length 5.08)
-					(name "SDI"
+				(pin no_connect line
+					(at -7.62 0 0)
+					(length 2.54) hide
+					(name "NC"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6134,10 +6135,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at 15.24 2.54 180)
-					(length 5.08)
-					(name "SCK"
+				(pin no_connect line
+					(at -7.62 -2.54 0)
+					(length 2.54) hide
+					(name "NC"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6152,10 +6153,10 @@
 						)
 					)
 				)
-				(pin bidirectional line
-					(at 15.24 7.62 180)
-					(length 5.08)
-					(name "SDO"
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 2.54)
+					(name "VCC"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6170,10 +6171,10 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at -2.54 15.24 270)
-					(length 5.08)
-					(name "VDDIO"
+				(pin input line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "SCL"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6188,10 +6189,10 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 2.54 -15.24 90)
-					(length 5.08)
-					(name "GND"
+				(pin no_connect line
+					(at -7.62 2.54 0)
+					(length 2.54) hide
+					(name "DAP"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6199,24 +6200,6 @@
 						)
 					)
 					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 2.54 15.24 270)
-					(length 5.08)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7350,12 +7333,6 @@
 		(uuid "20e583e0-7c17-4077-9f11-492dfe2e6350")
 	)
 	(junction
-		(at 317.5 25.4)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "21e84fc1-9728-422d-b8a4-65cb22906698")
-	)
-	(junction
 		(at 101.6 148.59)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7384,6 +7361,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2d932229-8af1-44bb-b208-7777918ea649")
+	)
+	(junction
+		(at 309.88 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2fdc3d0f-d2db-4cad-aba9-d834b69ee3b9")
 	)
 	(junction
 		(at 160.02 34.29)
@@ -7444,6 +7427,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5671315e-e70f-4401-bdc4-4d26728e15c0")
+	)
+	(junction
+		(at 335.28 26.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5b22f37d-824d-43b2-93fa-0e8621ec8e69")
 	)
 	(junction
 		(at 78.74 22.86)
@@ -7524,12 +7513,6 @@
 		(uuid "a0b4cd4d-152b-4437-bea0-826cac9c7363")
 	)
 	(junction
-		(at 314.96 27.94)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a2db94a5-b013-4f38-9dbb-50f0374316a4")
-	)
-	(junction
 		(at 40.64 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7590,12 +7573,6 @@
 		(uuid "c6e9a498-1205-4941-8632-48cfb8d5d431")
 	)
 	(junction
-		(at 320.04 27.94)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c716203e-e47d-4dd6-bbfe-13c34f26528e")
-	)
-	(junction
 		(at 204.47 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7644,12 +7621,6 @@
 		(uuid "ebde250c-9329-4f9f-b86d-fdcedd713812")
 	)
 	(junction
-		(at 317.5 63.5)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f01be893-c472-41aa-828b-e9c2122ae661")
-	)
-	(junction
 		(at 243.84 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7666,6 +7637,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f56d9027-cc43-4bc4-bde8-e330fd7b8148")
+	)
+	(junction
+		(at 309.88 33.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f626dbb6-c730-41c5-92e0-6559e59d0420")
 	)
 	(junction
 		(at 204.47 67.31)
@@ -7815,13 +7792,13 @@
 	)
 	(wire
 		(pts
-			(xy 317.5 63.5) (xy 320.04 63.5)
+			(xy 335.28 26.67) (xy 334.01 26.67)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "05644b5c-4a48-485a-82c7-581159909ada")
+		(uuid "05192166-6a89-44d3-840d-73f67062e9e2")
 	)
 	(wire
 		(pts
@@ -8035,6 +8012,16 @@
 	)
 	(wire
 		(pts
+			(xy 336.55 36.83) (xy 336.55 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "128c6638-cd3e-4c5c-a124-c0d851a13afd")
+	)
+	(wire
+		(pts
 			(xy 255.27 22.86) (xy 257.81 22.86)
 		)
 		(stroke
@@ -8165,16 +8152,6 @@
 	)
 	(wire
 		(pts
-			(xy 280.67 46.99) (xy 302.26 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1dbb25ec-c861-4300-a447-8da95dfc4f43")
-	)
-	(wire
-		(pts
 			(xy 91.44 109.22) (xy 86.36 109.22)
 		)
 		(stroke
@@ -8192,6 +8169,16 @@
 			(type default)
 		)
 		(uuid "1fd4a598-c2db-40e6-905c-570ab7e97834")
+	)
+	(wire
+		(pts
+			(xy 336.55 29.21) (xy 336.55 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21b15bd6-26e3-4abb-bc26-af065f9bfde7")
 	)
 	(wire
 		(pts
@@ -8332,16 +8319,6 @@
 			(type default)
 		)
 		(uuid "27b7dddd-8085-47fb-938c-67a20b2ab20a")
-	)
-	(wire
-		(pts
-			(xy 320.04 27.94) (xy 320.04 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2864db56-df90-431b-8884-98537a01a0a1")
 	)
 	(wire
 		(pts
@@ -8505,16 +8482,6 @@
 	)
 	(wire
 		(pts
-			(xy 280.67 52.07) (xy 302.26 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "384e28c8-55ce-469e-bc80-01fecf765835")
-	)
-	(wire
-		(pts
 			(xy 48.26 148.59) (xy 48.26 146.05)
 		)
 		(stroke
@@ -8635,6 +8602,16 @@
 	)
 	(wire
 		(pts
+			(xy 320.04 40.64) (xy 334.01 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d721717-e19b-4dc4-a608-80b0bc26f6a5")
+	)
+	(wire
+		(pts
 			(xy 50.8 39.37) (xy 63.5 39.37)
 		)
 		(stroke
@@ -8672,6 +8649,16 @@
 			(type default)
 		)
 		(uuid "42d194a9-e5e5-4b1a-a86f-2e0c65f6005b")
+	)
+	(wire
+		(pts
+			(xy 335.28 25.4) (xy 335.28 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43142e42-2558-4b91-a4cf-44897399d81c")
 	)
 	(wire
 		(pts
@@ -8722,6 +8709,16 @@
 			(type default)
 		)
 		(uuid "45ed4c6b-4b9f-44a0-99b8-d4e4c7194546")
+	)
+	(wire
+		(pts
+			(xy 320.04 43.18) (xy 336.55 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46b9f6eb-5ae0-4fd7-a23b-9e725df1f0fe")
 	)
 	(wire
 		(pts
@@ -8915,6 +8912,16 @@
 	)
 	(wire
 		(pts
+			(xy 309.88 33.02) (xy 309.88 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52ce733a-3c67-48ee-a848-e2655ab68bc5")
+	)
+	(wire
+		(pts
 			(xy 52.07 90.17) (xy 52.07 92.71)
 		)
 		(stroke
@@ -8985,16 +8992,6 @@
 	)
 	(wire
 		(pts
-			(xy 320.04 29.21) (xy 320.04 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "57ec629e-cad7-49f6-9ed0-84cb15b4bed5")
-	)
-	(wire
-		(pts
 			(xy 273.05 111.76) (xy 284.48 111.76)
 		)
 		(stroke
@@ -9052,6 +9049,16 @@
 			(type default)
 		)
 		(uuid "5cc43bc0-3003-4ce8-9094-794bab027c6d")
+	)
+	(wire
+		(pts
+			(xy 289.56 39.37) (xy 289.56 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d1cb46a-b2e7-4955-acaa-5ec215c750ff")
 	)
 	(wire
 		(pts
@@ -9295,6 +9302,16 @@
 	)
 	(wire
 		(pts
+			(xy 309.88 52.07) (xy 309.88 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7173e16d-fc68-41ef-bf62-59182c201c03")
+	)
+	(wire
+		(pts
 			(xy 203.2 132.08) (xy 205.74 132.08)
 		)
 		(stroke
@@ -9302,6 +9319,16 @@
 			(type default)
 		)
 		(uuid "7220763a-4d9a-4596-b738-1b431681bc4d")
+	)
+	(wire
+		(pts
+			(xy 334.01 36.83) (xy 334.01 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7231ebb9-c450-4a40-9f1b-198dbbfb62f8")
 	)
 	(wire
 		(pts
@@ -9425,16 +9452,6 @@
 	)
 	(wire
 		(pts
-			(xy 314.96 25.4) (xy 314.96 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7be9bb9d-3df7-463a-ba32-d03de4ea427a")
-	)
-	(wire
-		(pts
 			(xy 52.07 90.17) (xy 52.07 86.36)
 		)
 		(stroke
@@ -9515,16 +9532,6 @@
 	)
 	(wire
 		(pts
-			(xy 317.5 66.04) (xy 317.5 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89b3854d-4167-4637-9d6f-b078b65e9f10")
-	)
-	(wire
-		(pts
 			(xy 59.69 175.26) (xy 57.15 175.26)
 		)
 		(stroke
@@ -9532,16 +9539,6 @@
 			(type default)
 		)
 		(uuid "8afdd1ba-a3f3-4e24-a292-ee79432ca974")
-	)
-	(wire
-		(pts
-			(xy 317.5 24.13) (xy 317.5 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8c9f0830-302d-4860-a7c6-c69442e8374f")
 	)
 	(wire
 		(pts
@@ -9555,6 +9552,16 @@
 	)
 	(wire
 		(pts
+			(xy 289.56 52.07) (xy 309.88 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d52530f-5020-4cd1-8109-81dfa50665ee")
+	)
+	(wire
+		(pts
 			(xy 26.67 39.37) (xy 30.48 39.37)
 		)
 		(stroke
@@ -9562,16 +9569,6 @@
 			(type default)
 		)
 		(uuid "8d55e081-e7e9-44ef-bd7e-0a43c81195c9")
-	)
-	(wire
-		(pts
-			(xy 320.04 27.94) (xy 322.58 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8dc4ed56-aae7-41d4-8ba1-ed011e475e5e")
 	)
 	(wire
 		(pts
@@ -9915,23 +9912,13 @@
 	)
 	(wire
 		(pts
-			(xy 299.72 27.94) (xy 303.53 27.94)
+			(xy 289.56 33.02) (xy 309.88 33.02)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a0bf59b7-a66d-41de-a858-8538ae9e475c")
-	)
-	(wire
-		(pts
-			(xy 314.96 27.94) (xy 314.96 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a2496544-88b6-4a64-ae80-cdac39e14b35")
+		(uuid "a1269544-760b-44a5-b741-eac9872c192e")
 	)
 	(wire
 		(pts
@@ -9985,13 +9972,13 @@
 	)
 	(wire
 		(pts
-			(xy 314.96 63.5) (xy 317.5 63.5)
+			(xy 309.88 33.02) (xy 309.88 35.56)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a5cea8cf-848d-4a2c-9dbd-4d278aa65efc")
+		(uuid "a49538be-7ea3-4268-b4fa-6f742d616273")
 	)
 	(wire
 		(pts
@@ -10145,6 +10132,16 @@
 	)
 	(wire
 		(pts
+			(xy 334.01 26.67) (xy 334.01 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afea2faa-d7a1-496a-9302-340a9d9ad093")
+	)
+	(wire
+		(pts
 			(xy 322.58 97.79) (xy 327.66 97.79)
 		)
 		(stroke
@@ -10182,16 +10179,6 @@
 			(type default)
 		)
 		(uuid "b1bbe1b5-342a-4fb2-b3da-e27d28b04088")
-	)
-	(wire
-		(pts
-			(xy 311.15 27.94) (xy 314.96 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b1e8ce62-2092-4b38-8588-6fe6ed13f190")
 	)
 	(wire
 		(pts
@@ -10245,16 +10232,6 @@
 	)
 	(wire
 		(pts
-			(xy 320.04 63.5) (xy 320.04 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b42e1250-54ad-4c86-895a-0337cbb0a289")
-	)
-	(wire
-		(pts
 			(xy 63.5 186.69) (xy 63.5 187.96)
 		)
 		(stroke
@@ -10292,6 +10269,16 @@
 			(type default)
 		)
 		(uuid "b53f03d9-a81c-4ec0-b01b-0163f3097e7b")
+	)
+	(wire
+		(pts
+			(xy 289.56 46.99) (xy 289.56 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b58648a5-a772-4e8e-b7f8-6c71d79d42c0")
 	)
 	(wire
 		(pts
@@ -10342,16 +10329,6 @@
 			(type default)
 		)
 		(uuid "b99e521b-c056-4e3b-8344-f6a3f6abef96")
-	)
-	(wire
-		(pts
-			(xy 314.96 59.69) (xy 314.96 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9f843aa-03b8-4f09-afc5-4c99b2369d09")
 	)
 	(wire
 		(pts
@@ -10422,16 +10399,6 @@
 			(type default)
 		)
 		(uuid "c0f29bf1-2cf9-4e85-8d98-6a0b5026a950")
-	)
-	(wire
-		(pts
-			(xy 320.04 25.4) (xy 317.5 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c119e507-3ef6-4d4e-8b7c-11a3d206a505")
 	)
 	(wire
 		(pts
@@ -10552,26 +10519,6 @@
 			(type default)
 		)
 		(uuid "c9f8c2b7-6dc8-45bd-bf8c-87eca7b4cfad")
-	)
-	(wire
-		(pts
-			(xy 280.67 41.91) (xy 302.26 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca186acf-b82c-4df8-a3a3-dbf252ff1671")
-	)
-	(wire
-		(pts
-			(xy 317.5 25.4) (xy 314.96 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca77ea05-7a0b-4bfd-8e23-b88959843205")
 	)
 	(wire
 		(pts
@@ -10745,16 +10692,6 @@
 	)
 	(wire
 		(pts
-			(xy 330.2 27.94) (xy 334.01 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d8e4707a-b1a5-43aa-9f0a-19e8264fd8a1")
-	)
-	(wire
-		(pts
 			(xy 200.66 127) (xy 205.74 127)
 		)
 		(stroke
@@ -10812,16 +10749,6 @@
 			(type default)
 		)
 		(uuid "dbf774a1-ec57-4428-b4f1-36396a1b55d5")
-	)
-	(wire
-		(pts
-			(xy 280.67 36.83) (xy 302.26 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd5e9d86-268f-4622-9aa1-8d3ce25166c9")
 	)
 	(wire
 		(pts
@@ -10945,6 +10872,16 @@
 	)
 	(wire
 		(pts
+			(xy 309.88 50.8) (xy 309.88 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e48b20db-d9ae-4e97-a1d8-f6b52f0c5eb1")
+	)
+	(wire
+		(pts
 			(xy 181.61 67.31) (xy 190.5 67.31)
 		)
 		(stroke
@@ -11062,6 +10999,16 @@
 			(type default)
 		)
 		(uuid "e8e09b65-6530-4571-a916-94ebde0c60bc")
+	)
+	(wire
+		(pts
+			(xy 336.55 26.67) (xy 335.28 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e95f526e-e95d-47fe-8e66-aebd001cbc75")
 	)
 	(wire
 		(pts
@@ -11512,16 +11459,16 @@
 		)
 		(uuid "16d5b0b3-2a30-4d2b-8a0c-edc24ff51592")
 	)
-	(label "TEMP1-CS"
-		(at 280.67 52.07 0)
+	(label "I2C-SCL"
+		(at 331.47 40.64 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "1e27be69-f39b-4034-8b94-c806afabc448")
+		(uuid "1b086337-4f72-49d3-9fae-e648843b6bd5")
 	)
 	(label "BTN2"
 		(at 66.04 93.98 0)
@@ -11544,17 +11491,6 @@
 			(justify right bottom)
 		)
 		(uuid "27be36a1-29a6-436f-b4e8-551702d2a879")
-	)
-	(label "SPI-MOSI"
-		(at 280.67 46.99 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2a8bf6b1-9c97-43da-9944-3795f94e0c3a")
 	)
 	(label "LED-PWM"
 		(at 280.67 67.31 180)
@@ -11699,17 +11635,6 @@
 		)
 		(uuid "6b7c0cad-6147-40c1-8b34-3206b54e5ca2")
 	)
-	(label "SPI-SCK"
-		(at 280.67 41.91 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "75600531-90c8-425c-8c09-b11dd2baaf47")
-	)
 	(label "SPI-MISO"
 		(at 217.17 45.72 0)
 		(fields_autoplaced yes)
@@ -11731,17 +11656,6 @@
 			(justify left bottom)
 		)
 		(uuid "7699361b-ffe0-4333-8920-eab55756dcd8")
-	)
-	(label "SPI-MISO"
-		(at 280.67 36.83 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7c407983-5784-40e9-b676-08c1123dbe52")
 	)
 	(label "I2C-SCL"
 		(at 217.17 60.96 0)
@@ -11786,6 +11700,17 @@
 			(justify left bottom)
 		)
 		(uuid "96748434-38db-4ffc-8394-2e412ffd7398")
+	)
+	(label "I2C-SDA"
+		(at 331.47 43.18 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9b3af4b0-70eb-41ff-b809-dd32c5a0d67e")
 	)
 	(label "GPIO1{slash}U0TXD"
 		(at 153.67 81.28 180)
@@ -12046,15 +11971,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C116241"
-			(at 260.35 128.524 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "a0a03a6e-96e8-478a-b74a-80993b8cf729")
 		)
@@ -12135,6 +12051,72 @@
 			(project ""
 				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 309.88 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0258ceea-d2d2-485c-8daf-61c50286728a")
+		(property "Reference" "#PWR028"
+			(at 309.88 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 309.88 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 309.88 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 309.88 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 309.88 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2251e7cf-e304-4c2d-a445-36a822d46f8e")
+		)
+		(instances
+			(project "hstat"
+				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -12270,15 +12252,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C17557"
-			(at 164.084 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "5f61c60e-7626-459a-a3ba-5ffb9f6ac98e")
 		)
@@ -12350,15 +12323,6 @@
 		)
 		(property "JLCPCB PN" "C45783"
 			(at 92.71 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C45783"
-			(at 93.726 37.084 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12577,15 +12541,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C28233"
-			(at 44.45 95.2499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "9390c938-9e13-44c7-83df-fb76b7e92e1e")
 		)
@@ -12657,15 +12612,6 @@
 		)
 		(property "JLCPCB PN" "C107045"
 			(at 57.15 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C107045"
-			(at 57.15 179.578 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12959,113 +12905,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Sensor:BME280")
-		(at 317.5 44.45 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "12198f67-8907-4d79-8208-83741253c7b3")
-		(property "Reference" "U5"
-			(at 328.93 43.1799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "BME280"
-			(at 328.93 45.7199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering"
-			(at 279.4 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf"
-			(at 317.5 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "3-in-1 sensor, humidity, pressure, temperature, I2C and SPI interface, 1.71-3.6V, LGA-8"
-			(at 317.5 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB PN" "C92489"
-			(at 317.5 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C92489"
-			(at 328.93 43.1799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "5"
-			(uuid "af0c2fb7-f2b2-408f-9a9a-3cdb70d0e8c5")
-		)
-		(pin "4"
-			(uuid "4cfc35b7-3a20-4c1a-988b-52558207e1fd")
-		)
-		(pin "7"
-			(uuid "1f7c2c88-89b7-48a9-9a1c-35ef32e3c620")
-		)
-		(pin "2"
-			(uuid "10186b67-b1f6-4424-9891-d1e9d12af8e7")
-		)
-		(pin "6"
-			(uuid "ec374b7f-b67e-48fa-aa3c-beb6324e754f")
-		)
-		(pin "1"
-			(uuid "704ae0f4-a9b7-4d62-80bc-fb4e43251f4c")
-		)
-		(pin "8"
-			(uuid "853ccea1-92e7-4206-82db-92747b0b8edd")
-		)
-		(pin "3"
-			(uuid "75f630fc-7d59-498a-81e7-6a1d8cd2686f")
-		)
-		(instances
-			(project ""
-				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
-					(reference "U5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:D_Schottky")
 		(at 121.92 146.05 0)
 		(unit 1)
@@ -13119,15 +12958,6 @@
 		)
 		(property "JLCPCB PN" "C8598"
 			(at 121.92 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C8598"
-			(at 118.11 145.034 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13278,15 +13108,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C318884"
-			(at 195.58 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "e3ba6339-b757-49d1-84a0-d87680356955")
 		)
@@ -13364,15 +13185,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C318884"
-			(at 195.58 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "4cfd1b7a-64c7-403e-ad65-fa2488e67aa9")
 		)
@@ -13383,6 +13195,84 @@
 			(project ""
 				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
 					(reference "SW2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 336.55 33.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1b28b650-aa11-4cda-a752-4466126dc2a0")
+		(property "Reference" "R23"
+			(at 335.28 35.306 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "4.7k"
+			(at 335.28 31.242 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 337.566 33.274 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 336.55 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 336.55 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB PN" "C17673"
+			(at 336.55 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "40908795-8665-4d54-aaf5-80797a2bdb60")
+		)
+		(pin "1"
+			(uuid "32773580-ad69-4de6-8863-a2d71b493adf")
+		)
+		(instances
+			(project "hstat"
+				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -13655,15 +13545,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C20069155"
-			(at 236.22 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "1b27616b-7de7-4212-9d2e-8ab41087c632")
 		)
@@ -13895,15 +13776,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C95872"
-			(at 275.59 124.4599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "65da1eb3-a472-4b0e-9b39-945f6fbb7dca")
 		)
@@ -13914,6 +13786,72 @@
 			(project "hstat"
 				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
 					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 335.28 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2e863fbc-8041-4dd3-aa0a-a3f013f28eed")
+		(property "Reference" "#PWR026"
+			(at 335.28 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 335.28 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 335.28 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 335.28 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 335.28 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b6d00f90-0ee7-4979-be9f-9b96b3149e62")
+		)
+		(instances
+			(project "hstat"
+				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -13975,15 +13913,6 @@
 		)
 		(property "JLCPCB PN" "C17556"
 			(at 151.13 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C17556"
-			(at 148.844 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14062,15 +13991,6 @@
 		)
 		(property "JLCPCB PN" "C2297"
 			(at 16.51 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C2297"
-			(at 19.05 30.988 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14207,73 +14127,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 299.72 27.94 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "34bc2258-7d07-4b03-aef4-33061846074e")
-		(property "Reference" "#PWR026"
-			(at 293.37 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 295.91 27.9399 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 299.72 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 299.72 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 299.72 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "409ad64f-df89-43c1-8c15-965bdf944175")
-		)
-		(instances
-			(project "hstat"
-				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
-					(reference "#PWR026")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Polarized_Small_US")
 		(at 252.73 125.73 0)
 		(unit 1)
@@ -14327,15 +14180,6 @@
 		)
 		(property "JLCPCB PN" "C116241"
 			(at 252.73 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C116241"
-			(at 254 128.524 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14486,15 +14330,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C17477"
-			(at 46.99 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "4347afdc-e2ca-4143-bbd6-e85a8b52ff98")
 		)
@@ -14566,15 +14401,6 @@
 		)
 		(property "JLCPCB PN" "C107045"
 			(at 69.85 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C107045"
-			(at 65.786 179.578 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14659,15 +14485,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C17513"
-			(at 105.41 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "4835d861-8c32-4c7c-a302-bddcc7462121")
 		)
@@ -14737,15 +14554,6 @@
 		)
 		(property "JLCPCB PN" "C9002"
 			(at 63.5 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C9002"
-			(at 59.944 170.434 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14973,15 +14781,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C20069155"
-			(at 121.92 158.7499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "d2b0641b-88fc-4eb2-b327-c5f2d277c5d7")
 		)
@@ -15135,15 +14934,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C318884"
-			(at 28.194 98.552 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "e0c2c91c-8d91-499a-a5da-cb87b59a58ff")
 		)
@@ -15283,15 +15073,6 @@
 		)
 		(property "JLCPCB PN" "C191023"
 			(at 87.63 27.94 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C191023"
-			(at 90.17 26.9874 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15443,15 +15224,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C17556"
-			(at 148.844 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "13e87a2f-ed23-4ea4-9558-6e7c565b0dab")
 		)
@@ -15525,15 +15297,6 @@
 		)
 		(property "JLCPCB PN" "C20069155"
 			(at 236.22 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C20069155"
-			(at 236.22 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15820,15 +15583,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C28233"
-			(at 38.1 78.7399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "0dd0a912-32dd-4cd5-b062-954183429b7f")
 		)
@@ -15905,6 +15659,82 @@
 			(project "hstat"
 				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 289.56 43.18 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5712f12c-151a-4ee3-87ae-fe8e14a63bba")
+		(property "Reference" "C13"
+			(at 288.29 40.386 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF/16V"
+			(at 292.862 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 288.5948 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 289.56 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 289.56 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB PN" "C28233"
+			(at 289.56 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "83c908de-9ebc-4294-9999-e0a1866d7c89")
+		)
+		(pin "1"
+			(uuid "4f8a1319-e466-4e40-82d5-ac09fd86531c")
+		)
+		(instances
+			(project "hstat"
+				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -16031,15 +15861,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C17414"
-			(at 162.56 99.0599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "b163522c-8853-4599-a6d9-7196589d4e7e")
 		)
@@ -16111,15 +15932,6 @@
 		)
 		(property "JLCPCB PN" "C84256"
 			(at 26.67 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C84256"
-			(at 29.21 30.988 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16205,15 +16017,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C45783"
-			(at 166.116 39.624 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "c0e8e6ff-7021-42ed-b589-1c52862ef00c")
 		)
@@ -16285,15 +16088,6 @@
 		)
 		(property "JLCPCB PN" "C15850"
 			(at 63.5 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C15850"
-			(at 64.516 45.974 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16378,15 +16172,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C318884"
-			(at 195.58 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "1e6be5e9-0f66-4d1f-b2ac-7c7914020f66")
 		)
@@ -16397,91 +16182,6 @@
 			(project "hstat"
 				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
 					(reference "SW3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 307.34 27.94 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6d1d1ec0-b7ae-4a2d-97e4-9828e6d9cb14")
-		(property "Reference" "C13"
-			(at 310.134 26.67 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100nF/16V"
-			(at 307.34 31.242 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 311.15 26.9748 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 307.34 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 307.34 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB PN" "C28233"
-			(at 307.34 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C28233"
-			(at 310.134 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "0d064e9c-18ae-4169-bae4-667510513cd5")
-		)
-		(pin "1"
-			(uuid "fc41b685-d0fc-4bbd-aea8-8bae200c35b1")
-		)
-		(instances
-			(project "hstat"
-				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
-					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -16541,15 +16241,6 @@
 		)
 		(property "JLCPCB PN" "C28233"
 			(at 85.09 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C28233"
-			(at 87.884 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16694,15 +16385,6 @@
 		)
 		(property "JLCPCB PN" "C17414"
 			(at 106.68 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C17414"
-			(at 107.95 138.684 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16960,15 +16642,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C37704"
-			(at 144.78 170.1799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "51f9d399-d61a-4683-ac6c-de679de3d6ce")
 		)
@@ -17141,15 +16814,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C17513"
-			(at 224.028 101.854 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "8bab2311-2168-4599-bb9b-8ee10bfbbcf8")
 		)
@@ -17222,15 +16886,6 @@
 		)
 		(property "JLCPCB PN" "C8689"
 			(at 80.01 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C8689"
-			(at 82.2041 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17371,15 +17026,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C78988"
-			(at 121.92 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "0044ad72-5cd2-4de6-b71d-4540c4b28950")
 		)
@@ -17458,15 +17104,6 @@
 		)
 		(property "JLCPCB PN" "C17557"
 			(at 127 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C17557"
-			(at 127 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17554,15 +17191,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C15127"
-			(at 78.74 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "8aa724a1-83a1-4b78-b96b-b220ae2ebd48")
 		)
@@ -17637,15 +17265,6 @@
 		)
 		(property "JLCPCB PN" "C17513"
 			(at 33.02 22.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C17513"
-			(at 30.734 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17798,15 +17417,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C17414"
-			(at 54.61 81.2799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "09e2f164-655b-429d-8b15-d8f8edc53cc7")
 		)
@@ -17883,6 +17493,101 @@
 			(project "hstat"
 				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
 					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Sensor_Humidity:HDC1080")
+		(at 312.42 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "911cff99-b450-4ab5-a3ea-d18fbcb438ba")
+		(property "Reference" "U8"
+			(at 303.53 41.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "HDC1080"
+			(at 303.53 44.4499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Package_SON:Texas_PWSON-N6"
+			(at 311.15 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/hdc1080.pdf"
+			(at 302.26 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Low Power,High Accuracy Digital Humidity Sensor with Temperature Sensor"
+			(at 312.42 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB PN" "C82227"
+			(at 312.42 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "7"
+			(uuid "03742caf-349d-4447-bb88-2bd146b76e74")
+		)
+		(pin "3"
+			(uuid "a81249a0-8f68-4bbb-b875-45123fc65541")
+		)
+		(pin "6"
+			(uuid "2b635570-8584-49ba-8b5b-a5671d08c473")
+		)
+		(pin "5"
+			(uuid "39905bc1-5401-46cc-b490-69724b85dae0")
+		)
+		(pin "4"
+			(uuid "de6b7ba3-d83b-4e6e-80a0-327ac1de182e")
+		)
+		(pin "2"
+			(uuid "efddc204-34d2-436d-b04b-0c1c418068db")
+		)
+		(pin "1"
+			(uuid "84b554ed-f955-4ada-9494-2bae484bd113")
+		)
+		(instances
+			(project ""
+				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
+					(reference "U8")
 					(unit 1)
 				)
 			)
@@ -18023,15 +17728,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C5832372"
-			(at 151.13 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "56d84d5e-b00a-47cd-a8fb-26645172ac93")
 		)
@@ -18042,73 +17738,6 @@
 			(project ""
 				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
 					(reference "L1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 334.01 27.94 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "964382ec-b44b-40e2-8cb7-21689010b6c4")
-		(property "Reference" "#PWR030"
-			(at 340.36 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 337.82 27.9399 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 334.01 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 334.01 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 334.01 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "693354b0-e864-4432-a8c8-7105b5d88e1e")
-		)
-		(instances
-			(project "hstat"
-				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
-					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -18170,15 +17799,6 @@
 		)
 		(property "JLCPCB PN" "C17414"
 			(at 189.23 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C17414"
-			(at 187.96 31.496 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18255,15 +17875,6 @@
 		)
 		(property "JLCPCB PN" "C8598"
 			(at 132.08 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C8598"
-			(at 128.524 152.654 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18349,15 +17960,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C17414"
-			(at 180.34 31.496 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "66cae11a-2b64-4cde-a127-ebf38fc5b409")
 		)
@@ -18368,6 +17970,84 @@
 			(project "hstat"
 				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
 					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 334.01 33.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "99bd452c-6309-45db-8f66-12a83891926e")
+		(property "Reference" "R22"
+			(at 332.74 35.306 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "4.7k"
+			(at 332.74 31.242 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 335.026 33.274 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 334.01 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 334.01 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB PN" "C17673"
+			(at 334.01 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c2282eae-f489-4200-907b-7b6681584da2")
+		)
+		(pin "1"
+			(uuid "6337dce1-c124-4d2f-b6bc-104bb8abc616")
+		)
+		(instances
+			(project "hstat"
+				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -18429,15 +18109,6 @@
 		)
 		(property "JLCPCB PN" "C15850"
 			(at 54.61 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C15850"
-			(at 55.626 24.384 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18542,15 +18213,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C95872"
-			(at 267.97 124.4599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "4cb9334b-b104-4775-b37c-8f65ebc0d47d")
 		)
@@ -18627,15 +18289,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C8598"
-			(at 111.252 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "b4c6a6b5-258a-4b8d-ae49-e91f03484903")
 		)
@@ -18646,72 +18299,6 @@
 			(project "hstat"
 				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
 					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 317.5 24.13 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ad7f6b99-b295-4ec5-ad38-9f2e886e09cf")
-		(property "Reference" "#PWR027"
-			(at 317.5 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 317.5 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 317.5 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 317.5 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 317.5 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "632c2f75-348d-48a2-b518-6d2183b931b6")
-		)
-		(instances
-			(project "hstat"
-				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
-					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -18811,7 +18398,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
 			(at 40.64 54.61 0)
 			(effects
 				(font
@@ -18840,15 +18427,6 @@
 		)
 		(property "JLCPCB PN" "C12044"
 			(at 40.64 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C12044"
-			(at 42.8341 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18939,15 +18517,6 @@
 		)
 		(property "JLCPCB PN" "C17414"
 			(at 101.6 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C17414"
-			(at 102.616 138.684 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19243,15 +18812,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C17414"
-			(at 182.88 31.496 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "76d72960-7c9a-480f-99e9-80f202fc1a4d")
 		)
@@ -19262,91 +18822,6 @@
 			(project "hstat"
 				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
 					(reference "R15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 326.39 27.94 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ba67a524-251d-4748-9689-9bb7e304b685")
-		(property "Reference" "C14"
-			(at 329.184 26.67 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100nF/16V"
-			(at 326.39 31.242 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 330.2 26.9748 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 326.39 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 326.39 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB PN" "C28233"
-			(at 326.39 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C28233"
-			(at 329.184 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "aaea5faf-3ba0-4a6e-b27e-2902d60e5fdc")
-		)
-		(pin "1"
-			(uuid "f2781c10-dc92-48ba-ac94-884c6e76258f")
-		)
-		(instances
-			(project "hstat"
-				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
-					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -19406,15 +18881,6 @@
 		)
 		(property "JLCPCB PN" "C17513"
 			(at 228.6 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C17513"
-			(at 224.028 131.064 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19557,15 +19023,6 @@
 		)
 		(property "JLCPCB PN" "C2973667"
 			(at 111.76 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C2973667"
-			(at 111.76 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19762,15 +19219,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C20069155"
-			(at 121.92 173.9899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "0176ee9a-8710-4536-a540-ff809cecc153")
 		)
@@ -19852,15 +19300,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C17557"
-			(at 194.564 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "59c977ee-3783-4bb4-a230-a14ed97fac47")
 		)
@@ -19871,6 +19310,72 @@
 			(project "hstat"
 				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
 					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 309.88 31.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c25d9a6d-5c62-4c7a-b9f9-08f407139c0b")
+		(property "Reference" "#PWR047"
+			(at 309.88 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 309.88 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 309.88 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 309.88 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 309.88 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ef1735e8-51e4-4d5d-bb03-d4d469175edd")
+		)
+		(instances
+			(project "hstat"
+				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
+					(reference "#PWR047")
 					(unit 1)
 				)
 			)
@@ -19933,15 +19438,6 @@
 		)
 		(property "JLCPCB PN" "C45783"
 			(at 22.86 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C45783"
-			(at 26.67 78.7399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20027,15 +19523,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C17557"
-			(at 194.564 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "8d43777e-fbd7-4bd0-afc4-65c31936f333")
 		)
@@ -20109,15 +19596,6 @@
 		)
 		(property "JLCPCB PN" "C106900"
 			(at 213.36 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C106900"
-			(at 213.36 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20211,15 +19689,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C106900"
-			(at 213.36 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "1"
 			(uuid "eb645b5d-98e3-40e4-9130-ffae75ccf71d")
 		)
@@ -20295,15 +19764,6 @@
 		)
 		(property "JLCPCB PN" "C45783"
 			(at 71.12 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C45783"
-			(at 68.326 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20388,72 +19848,6 @@
 			(project "hstat"
 				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
 					(reference "#PWR021")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 317.5 66.04 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d213e1c7-d858-4760-9777-8e5b27be5d9c")
-		(property "Reference" "#PWR028"
-			(at 317.5 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 317.5 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 317.5 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 317.5 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 317.5 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a0d64023-b0e1-4f0c-94e8-59e5729b50be")
-		)
-		(instances
-			(project "hstat"
-				(path "/2b1c04f5-2b7f-4773-bc51-dcb231e5b23d"
-					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -20933,15 +20327,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C318884"
-			(at 195.58 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "a14b2873-d6ac-4c97-a1d9-5dd79fc81826")
 		)
@@ -21079,15 +20464,6 @@
 		)
 		(property "JLCPCB PN" "C2296"
 			(at 176.53 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C2296"
-			(at 175.768 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21441,15 +20817,6 @@
 		)
 		(property "JLCPCB PN" "C17513"
 			(at 105.41 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C17513"
-			(at 105.41 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21866,15 +21233,6 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C15849"
-			(at 55.88 95.2499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "e873208a-ed29-4377-a3e7-78ee1dd6cad7")
 		)
@@ -21946,15 +21304,6 @@
 		)
 		(property "JLCPCB PN" "C17414"
 			(at 186.69 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C17414"
-			(at 185.42 31.496 0)
 			(effects
 				(font
 					(size 1.27 1.27)
