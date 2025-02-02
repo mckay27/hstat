@@ -25575,7 +25575,7 @@
 		(path "/7ba45454-863e-47fe-9367-6538ffde4d90")
 		(sheetname "Root")
 		(sheetfile "hstat.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start 3.89 7.18)
 			(end 3.89 7.64)
