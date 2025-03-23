@@ -2,6 +2,7 @@ esphome:
   name: hstat
   friendly_name: hstat
   on_boot:
+    # Update arc on boot with value from thermostat component
     - lvgl.arc.update:
         id: thermostat_arc
         value: !lambda return (((id(heat_thermostat).target_temperature * (9.0/5.0)) + 32) - 30) * 2.0;
@@ -18,7 +19,7 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "0mUOPjg3h8O5Or9O3WAAcOxGa+a/G+jgmV0gNw6zSOU="
+    key: CHANGE_ME
 
 ota:
   - platform: esphome
@@ -30,14 +31,16 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Hstat2 Fallback Hotspot"
+    ssid: "Hstat Fallback Hotspot"
     password: "arlj55N3HC6o"
 
+# NTP Time setup
 time:
   - platform: sntp
     id: sntp_time
     timezone: America/Denver
     on_time:
+      # Update clock string every second
       - seconds: /1
         minutes: /1
         then:
@@ -52,21 +55,25 @@ time:
               id: cur_time_suffix
               text:
                 time_format: "%p"
+      # Enable antiburn at 2:05AM through 5:05AM every hour
       - hours: 2,3,4,5
         minutes: 5
         seconds: 0
         then:
           - switch.turn_on: switch_antiburn
+      # Disable antiburn after 30 minutes
       - hours: 2,3,4,5
         minutes: 35
         seconds: 0
         then:
           - switch.turn_off: switch_antiburn
 
+# ESP32 N16R8 PSRAM
 psram:
   mode: quad
   speed: 80MHz
 
+# I2C Bus for on board temp and touch
 i2c:
   - id: bus_a
     sda: GPIO21
@@ -74,39 +81,46 @@ i2c:
     scan: false
     frequency: 400
 
+# One Wire bus for external DS18B20 temp sensor
 one_wire:
   - platform: gpio
     pin: 5
 
+# SPI interface for display
 spi:
   clk_pin: GPIO14
   mosi_pin: GPIO13
   interface: spi2
 
+# LCD Backlight dimming control
 output:
   - platform: ledc
     pin: GPIO27
     id: backlight_pwm
-    
+
 switch:
+  # Yellow LED output
   - platform: gpio
     id: yellow_led
     pin:
       number: GPIO0
       mode: output
     name: "Yellow LED"
+  # Set output relay
   - platform: gpio
     id: set_sw
     pin:
       number: GPIO2
       mode: output
     name: "SET"
+  # Reset output relay
   - platform: gpio
     id: reset_sw
     pin:
       number: GPIO4
       mode: output
     name: "RESET"
+  # Wrap set/reset relay outputs into one switch with delay to turn off output pins
   - platform: template
     id: heat_output
     name: "Heat Output"
@@ -121,6 +135,7 @@ switch:
       - switch.turn_on: reset_sw
       - delay: 50ms
       - switch.turn_off: reset_sw
+  # Control LCD antiburn
   - platform: template
     name: Antiburn
     id: switch_antiburn
@@ -146,7 +161,9 @@ switch:
             - lvgl.widget.redraw:
             - light.turn_on: display_backlight
 
+# GPIO inputs
 binary_sensor:
+  # Button 1, tie to toggling thermostat mode
   - platform: gpio
     pin:
       number: GPIO32
@@ -186,6 +203,7 @@ binary_sensor:
     id: enter_btn
 
 sensor:
+  # Onboard temp/humidity sensor
   - platform: hdc1080
     i2c_id: bus_a
     temperature:
@@ -205,6 +223,12 @@ sensor:
             text:
               format: "%.1f°F"
               args: [ 'x * (9.0/5.0) + 32' ]
+      # Onboard temperature sensor calibration (in C)
+      #filters:
+      #  - calibrate_linear:
+          # Map X (from sensor) to Y (true value)
+      #    - 0.0 -> 1.0
+
     humidity:
       name: "hstat humidity"
       on_value:
@@ -217,6 +241,7 @@ sensor:
               format: "%.1f%%"
               args: [ 'x' ]
     update_interval: 30s
+  # VBUS measurement, if VBUS is lost, force thermostat to be off
   - platform: adc
     id: vbus_voltage
     pin: GPIO36
@@ -230,6 +255,7 @@ sensor:
           - climate.control:
               id: heat_thermostat
               mode: "OFF"
+  # External temperature sensor, update one_wire address here for new sensors
   - platform: dallas_temp
     address: 0x9200000037eeee28
     name: ext_temperature
@@ -245,14 +271,21 @@ sensor:
             args: [ 'x * (9.0/5.0) + 32' ]
 
 climate:
+  # Thermostat component
   - platform: thermostat
     id: heat_thermostat
     name: "HSTAT thermostat"
+    on_boot_restore_from: memory
     sensor: cur_temp
+    # Minimum duration heat must be off before being re-engaged
     min_heating_off_time: 1s
+    # Minimum duration heat must be on before being disengaged
     min_heating_run_time: 1s
+    # Minimum duration idle action must be active before going to another mode
     min_idle_time: 1s
+    # Minimum temperature below the set point before calling for heat
     heat_deadband: 2
+    # Maximum temperature about the set point before calling for idle
     heat_overrun: 2
     heat_action:
       - switch.turn_on: heat_output
@@ -674,6 +707,3 @@ lvgl:
             text_font: montserrat_14
             text: "Humidity"
             styles: text_style
-
-
-                
