@@ -402,7 +402,7 @@ lvgl:
       arc_color: 0x181b1c
     - id: arc_knob
       bg_color: 0x466d84
-  on_idle:
+  #on_idle:
     # Disable display timeout
     #timeout: !lambda "return (id(display_timeout).state * 1000);"
     #then:
