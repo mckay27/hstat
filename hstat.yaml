@@ -224,10 +224,12 @@ sensor:
               format: "%.1f°F"
               args: [ 'x * (9.0/5.0) + 32' ]
       # Onboard temperature sensor calibration (in C)
-      #filters:
-      #  - calibrate_linear:
-          # Map X (from sensor) to Y (true value)
-      #    - 0.0 -> 1.0
+      filters:
+        - calibrate_linear:
+           datapoints:
+            # Map X (from sensor) to Y (true value)
+            - 27 -> 24
+            - 24 -> 21
 
     humidity:
       name: "hstat humidity"
