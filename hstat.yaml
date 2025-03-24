@@ -403,11 +403,12 @@ lvgl:
     - id: arc_knob
       bg_color: 0x466d84
   on_idle:
-    timeout: !lambda "return (id(display_timeout).state * 1000);"
-    then:
-      - logger.log: "LVGL is idle"
-      - light.turn_off: display_backlight
-      - lvgl.pause:
+    # Disable display timeout
+    #timeout: !lambda "return (id(display_timeout).state * 1000);"
+    #then:
+    #  - logger.log: "LVGL is idle"
+    #  - light.turn_off: display_backlight
+    #  - lvgl.pause:
   keypads:
     enter: enter_btn
     next: up_btn
