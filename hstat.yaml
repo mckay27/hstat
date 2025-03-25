@@ -278,6 +278,7 @@ climate:
     id: heat_thermostat
     name: "HSTAT thermostat"
     on_boot_restore_from: memory
+    # cur_temp (use internal sensor), ext_temperature (use external sensor)
     sensor: cur_temp
     # Minimum duration heat must be off before being re-engaged
     min_heating_off_time: 1s
@@ -404,8 +405,8 @@ lvgl:
       arc_color: 0x181b1c
     - id: arc_knob
       bg_color: 0x466d84
+  # Disable display timeout
   #on_idle:
-    # Disable display timeout
     #timeout: !lambda "return (id(display_timeout).state * 1000);"
     #then:
     #  - logger.log: "LVGL is idle"
