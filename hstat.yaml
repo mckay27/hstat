@@ -210,11 +210,8 @@ sensor:
       name: "hstat temperature"
       id: cur_temp
       on_value:
-        - lvgl.label.update:
-            id: thermostat_cur_temp
-            text:
-              format: "%.1f°F"
-              args: [ 'x * (9.0/5.0) + 32' ]
+        # Put lvgl.label.update code with thermostat_cur_temp here to use internal temp sensor
+        # ====================================================================================
         - lvgl.indicator.update:
             id: int_temp_needle
             value: !lambda return (x * (9.0/5.0) + 32) * 10;
@@ -228,8 +225,8 @@ sensor:
         - calibrate_linear:
            datapoints:
             # Map X (from sensor) to Y (true value)
-            - 27 -> 24
-            - 24 -> 21
+            - 27 -> 23.44
+            - 24 -> 20.44
 
     humidity:
       name: "hstat humidity"
@@ -260,9 +257,17 @@ sensor:
   # External temperature sensor, update one_wire address here for new sensors
   - platform: dallas_temp
     address: 0x9200000037eeee28
-    name: ext_temperature
+    name: "External Temperature"
+    id: ext_temp
     update_interval: 30s
     on_value:
+      # Put lvgl.label.update code with thermostat_cur_temp here to use external temp sensor
+      - lvgl.label.update:
+            id: thermostat_cur_temp
+            text:
+              format: "%.1f°F"
+              args: [ 'x * (9.0/5.0) + 32' ]
+      # ====================================================================================
       - lvgl.indicator.update:
           id: ext_temp_needle
           value: !lambda return (x * (9.0/5.0) + 32) * 10;
@@ -278,8 +283,8 @@ climate:
     id: heat_thermostat
     name: "HSTAT thermostat"
     on_boot_restore_from: memory
-    # cur_temp (use internal sensor), ext_temperature (use external sensor)
-    sensor: cur_temp
+    # cur_temp (use internal sensor), ext_temp (use external sensor)
+    sensor: ext_temp
     # Minimum duration heat must be off before being re-engaged
     min_heating_off_time: 1s
     # Minimum duration heat must be on before being disengaged
@@ -287,9 +292,9 @@ climate:
     # Minimum duration idle action must be active before going to another mode
     min_idle_time: 1s
     # Minimum temperature below the set point before calling for heat
-    heat_deadband: 2
-    # Maximum temperature about the set point before calling for idle
-    heat_overrun: 2
+    heat_deadband: 1
+    # Maximum temperature above the set point before calling for idle
+    heat_overrun: 1
     heat_action:
       - switch.turn_on: heat_output
       - lvgl.label.update:
@@ -377,8 +382,8 @@ touchscreen:
     reset_pin: GPIO19
     transform:
       swap_xy: true
-      mirror_y: true
-      mirror_x: false
+      mirror_y: false
+      mirror_x: true
     on_release:
       - if:
           condition: lvgl.is_paused
