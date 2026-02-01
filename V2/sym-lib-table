@@ -1,0 +1,8 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "MH_micros")(type "KiCad")(uri "${KIPRJMOD}/../kicad-lib/micros/MH_micros.kicad_sym")(options "")(descr ""))
+  (lib (name "*partsbox")(type "HTTP")(uri "${KIPRJMOD}/../kicad-lib/partsbox.kicad_httplib")(options "")(descr ""))
+  (lib (name "MH_ics")(type "KiCad")(uri "${KIPRJMOD}/../kicad-lib/ics/MH_ics.kicad_sym")(options "")(descr ""))
+  (lib (name "MH_connectors")(type "KiCad")(uri "/home/mckay/Documents/GitHub/hstat/kicad-lib/connectors/MH_connectors.kicad_sym")(options "")(descr ""))
+  (lib (name "MH_transistors")(type "KiCad")(uri "/home/mckay/Documents/GitHub/hstat/kicad-lib/transistors/MH_transistors.kicad_sym")(options "")(descr ""))
+)
