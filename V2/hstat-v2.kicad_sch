@@ -14648,6 +14648,19 @@
 		)
 		(uuid "c9d3ed26-94ad-400b-a8c8-9cc8f0dc91a0")
 	)
+	(text "RTC"
+		(exclude_from_sim no)
+		(at 330.2 93.218 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+				(thickness 1.016)
+				(bold yes)
+				(color 0 194 0 1)
+			)
+		)
+		(uuid "e94f2565-8e67-46e4-b4ba-a29683ba06c6")
+	)
 	(text "Fuel Gauge"
 		(exclude_from_sim no)
 		(at 350.266 20.574 0)
