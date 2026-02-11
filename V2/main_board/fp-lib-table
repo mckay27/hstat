@@ -3,4 +3,5 @@
   (lib (name "MH_micros")(type "KiCad")(uri "${KIPRJMOD}/../../kicad-lib/micros/MH_micros.pretty")(options "")(descr ""))
   (lib (name "MH_ics")(type "KiCad")(uri "${KIPRJMOD}/../../kicad-lib/ics/MH_ics.pretty")(options "")(descr ""))
   (lib (name "MH_connectors")(type "KiCad")(uri "${KIPRJMOD}/../../kicad-lib/connectors/MH_connectors.pretty")(options "")(descr ""))
+  (lib (name "MH_switches")(type "KiCad")(uri "${KIPRJMOD}/../../kicad-lib/switches/MH_switches.pretty")(options "")(descr ""))
 )
