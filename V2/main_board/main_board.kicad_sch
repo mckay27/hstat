@@ -15775,6 +15775,16 @@
 	)
 	(wire
 		(pts
+			(xy 374.65 193.04) (xy 374.65 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "174a88d8-3e54-4ea5-8d61-ef3feb3803e4")
+	)
+	(wire
+		(pts
 			(xy 82.55 55.88) (xy 82.55 66.04)
 		)
 		(stroke
@@ -16739,6 +16749,16 @@
 	)
 	(wire
 		(pts
+			(xy 374.65 184.15) (xy 374.65 185.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4caa1815-d069-4386-b35d-0c28e1f7cddb")
+	)
+	(wire
+		(pts
 			(xy 367.03 33.02) (xy 372.11 33.02)
 		)
 		(stroke
@@ -16817,6 +16837,16 @@
 			(type default)
 		)
 		(uuid "51f9bab3-da43-4c72-b4eb-4b35c2272eae")
+	)
+	(wire
+		(pts
+			(xy 344.17 184.15) (xy 344.17 185.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52b0ae5a-2cc4-4167-8638-310af6c596d1")
 	)
 	(wire
 		(pts
@@ -18929,6 +18959,16 @@
 	)
 	(wire
 		(pts
+			(xy 344.17 193.04) (xy 344.17 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c88abda5-cd63-4587-81fe-9e5904ab2e07")
+	)
+	(wire
+		(pts
 			(xy 179.07 119.38) (xy 176.53 119.38)
 		)
 		(stroke
@@ -20977,6 +21017,72 @@
 			(project "main_board"
 				(path "/2310583b-51dd-4992-a296-db500aa0a56d"
 					(reference "#PWR086")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 374.65 194.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0666d8d0-d49d-4e61-92f5-4a1da8ca69e4")
+		(property "Reference" "#PWR095"
+			(at 374.65 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 374.65 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 374.65 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 374.65 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 374.65 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8e70d0c4-7fe2-45fc-bf58-43fe4c276e2a")
+		)
+		(instances
+			(project "main_board"
+				(path "/2310583b-51dd-4992-a296-db500aa0a56d"
+					(reference "#PWR095")
 					(unit 1)
 				)
 			)
@@ -27736,7 +27842,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x14_P2.54mm_Vertical_SMD"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x14_P2.54mm_Vertical_SMD"
 			(at 377.19 48.26 0)
 			(effects
 				(font
@@ -28047,6 +28153,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 374.65 184.15 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "819166e3-c716-4fa8-b37d-14877c16454c")
+		(property "Reference" "#PWR094"
+			(at 374.65 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 374.65 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 374.65 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 374.65 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 374.65 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "70d03c16-cc3b-4f24-b527-89b874bd81d9")
+		)
+		(instances
+			(project "main_board"
+				(path "/2310583b-51dd-4992-a296-db500aa0a56d"
+					(reference "#PWR094")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "*partsbox:M7")
 		(at 236.22 111.76 270)
 		(unit 1)
@@ -28232,6 +28403,112 @@
 			(project "main_board"
 				(path "/2310583b-51dd-4992-a296-db500aa0a56d"
 					(reference "#PWR087")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "*partsbox:0603-100nF")
+		(at 344.17 189.23 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "84cf7868-ded8-4fad-b1de-6c47a5249bf2")
+		(property "Reference" "C15"
+			(at 341.63 187.9662 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 341.63 190.5062 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 344.17 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "HTTPS://PARTSBOX.COM/I6AFR1F2MY2JJJ8VS6V1P4RPR25"
+			(at 344.17 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 344.17 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Type" "Meta"
+			(at 344.17 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 344.17 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" ""
+			(at 344.17 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PartsBox ID" "6afr1f2my2jjj8vs6v1p4rpr25"
+			(at 344.17 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5c4d31ad-aa5c-447a-bacc-0f824d61038f")
+		)
+		(pin "2"
+			(uuid "e21baf7b-8cb1-4590-9099-2a248a20c8ce")
+		)
+		(instances
+			(project "main_board"
+				(path "/2310583b-51dd-4992-a296-db500aa0a56d"
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -29283,6 +29560,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 344.17 194.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8d89648b-169a-42cb-9d86-53deef2dea4f")
+		(property "Reference" "#PWR092"
+			(at 344.17 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 344.17 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 344.17 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 344.17 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 344.17 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "270c42c2-a60a-4a98-ba17-7b7fcd893115")
+		)
+		(instances
+			(project "main_board"
+				(path "/2310583b-51dd-4992-a296-db500aa0a56d"
+					(reference "#PWR092")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "*partsbox:2604-1102")
 		(at 379.73 110.49 0)
 		(unit 1)
@@ -30067,6 +30410,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 344.17 184.15 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9cbc758c-8e97-45d7-8575-74583b3c8d99")
+		(property "Reference" "#PWR093"
+			(at 344.17 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 344.17 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 344.17 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 344.17 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 344.17 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e58cf42c-f263-4db3-bece-785c6c21c389")
+		)
+		(instances
+			(project "main_board"
+				(path "/2310583b-51dd-4992-a296-db500aa0a56d"
+					(reference "#PWR093")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "*partsbox:BC817-40")
 		(at 344.17 156.21 0)
 		(unit 1)
@@ -30667,6 +31075,112 @@
 			(project "main_board"
 				(path "/2310583b-51dd-4992-a296-db500aa0a56d"
 					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "*partsbox:0603-100nF")
+		(at 374.65 189.23 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a2881a39-79c8-452d-b7ea-dc9a1e0ae4e4")
+		(property "Reference" "C14"
+			(at 372.11 187.9662 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 372.11 190.5062 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 374.65 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "HTTPS://PARTSBOX.COM/I6AFR1F2MY2JJJ8VS6V1P4RPR25"
+			(at 374.65 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 374.65 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Type" "Meta"
+			(at 374.65 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 374.65 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" ""
+			(at 374.65 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PartsBox ID" "6afr1f2my2jjj8vs6v1p4rpr25"
+			(at 374.65 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5756df55-ef83-4c44-ab16-4d438b4a1137")
+		)
+		(pin "2"
+			(uuid "a5fb8acf-a4a4-4973-b0ce-29e51ff3471e")
+		)
+		(instances
+			(project "main_board"
+				(path "/2310583b-51dd-4992-a296-db500aa0a56d"
+					(reference "C14")
 					(unit 1)
 				)
 			)

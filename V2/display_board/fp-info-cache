@@ -1,4 +1,4 @@
-27107113813597636
+27112425870753614
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -71398,6 +71398,27 @@ MH_connectors
 
 0
 2
+2
+MH_connectors
+CONN2_2604-1102_WAG
+
+2604-1102 
+0
+4
+2
+MH_connectors
+PHOENIX_1771033
+
+
+0
+5
+4
+MH_connectors
+SAMESKY_TBLH10-508-02BK
+
+
+0
+4
 2
 MH_ics
 LD2412
