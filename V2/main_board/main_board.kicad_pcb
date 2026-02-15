@@ -17881,29 +17881,6 @@
 			(layer "F.Fab")
 			(uuid "42bd9886-a8dc-4da2-8ba5-a609504aa81a")
 		)
-		(fp_text user "*"
-			(at -10.16 -24.980001 270)
-			(layer "F.SilkS")
-			(uuid "1fadce5a-0573-4506-9777-0387495885a6")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(fp_text user "*"
-			(at -10.16 -24.980001 270)
-			(unlocked yes)
-			(layer "F.SilkS")
-			(uuid "f329ee83-4d0f-455a-8d87-2f1464217349")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(fp_text user "${REFERENCE}"
 			(at -5.08 -8.930001 0)
 			(unlocked yes)
@@ -19615,29 +19592,6 @@
 			(fill no)
 			(layer "F.Fab")
 			(uuid "b19ab3f7-64ed-4cfb-9eeb-f0e5284774f7")
-		)
-		(fp_text user "*"
-			(at -10.16 -24.980001 270)
-			(layer "F.SilkS")
-			(uuid "aba7e5d7-32eb-4d7f-ad98-63ac7a4c4810")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(fp_text user "*"
-			(at -10.16 -24.980001 270)
-			(unlocked yes)
-			(layer "F.SilkS")
-			(uuid "c559bb64-07d0-476e-87bd-e31e3997093b")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
 		)
 		(fp_text user "*"
 			(at -10.16 -22.940001 270)
@@ -29310,7 +29264,7 @@
 		(uuid "6114f617-3ead-4856-9f97-70a8992efcb6")
 		(at 111 134)
 		(property "Reference" "BT4"
-			(at 31.5 -8 0)
+			(at 31.5 -8 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "19a654d5-c200-49af-abd7-fc0c8010b994")
@@ -29584,7 +29538,7 @@
 		(uuid "669d2bc2-18f0-4de1-9ebb-a0873b648bb0")
 		(at 111 69.5)
 		(property "Reference" "BT1"
-			(at 31.5 -8 0)
+			(at 31.5 -8 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "d8323547-8989-45a7-ba1b-cdbfc90488cb")
@@ -31984,7 +31938,7 @@
 		(uuid "c71e83b4-49ae-4ca8-b618-9043c4690233")
 		(at 111 91)
 		(property "Reference" "BT2"
-			(at 31.5 -8 0)
+			(at 31.5 -8 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "18f7ee28-c046-4b84-af00-946fe388b7e5")
@@ -32822,7 +32776,7 @@
 		(uuid "ff3ff6af-1917-41bb-ad8e-24d277841dda")
 		(at 110.99 112.5)
 		(property "Reference" "BT3"
-			(at 34.26 -8 0)
+			(at 28.76 -8 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "c60fbaf7-d876-439b-92ac-2f035832b58f")

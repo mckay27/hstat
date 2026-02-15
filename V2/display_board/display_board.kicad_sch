@@ -20858,7 +20858,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e2069ab2-538d-4a7b-8a2b-c15693ad2790")
-		(property "Reference" "J5"
+		(property "Reference" "J1"
 			(at 200.66 116.84 0)
 			(effects
 				(font
@@ -20988,7 +20988,7 @@
 		(instances
 			(project "display_board"
 				(path "/b4a04f60-fca9-4e45-9f9f-b48317aec4e2"
-					(reference "J5")
+					(reference "J1")
 					(unit 1)
 				)
 			)
