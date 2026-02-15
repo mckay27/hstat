@@ -20491,6 +20491,16 @@
 		)
 		(uuid "49dde5ac-4299-47b4-ac00-3c06b0be17a0")
 	)
+	(label "RELAY2_SET"
+		(at 132.08 247.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "53a736cc-9f1b-416c-a712-75a4b15a48e3")
+	)
 	(label "I2C_SDA"
 		(at 275.59 212.09 180)
 		(effects
@@ -20560,6 +20570,16 @@
 			(justify right bottom)
 		)
 		(uuid "6872583b-63e7-4a94-8358-7f18a02f041e")
+	)
+	(label "RELAY2_RESET"
+		(at 132.08 240.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "70ec0c3c-9407-4030-b662-10d9231115d1")
 	)
 	(label "BTN2"
 		(at 358.14 45.72 0)
@@ -20831,16 +20851,6 @@
 		)
 		(uuid "c034d563-8df7-4b65-9b02-2691b1cc8e68")
 	)
-	(label "RELAY2_RESET"
-		(at 132.08 247.65 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c43089fb-eb04-4906-8544-0de9f788a76d")
-	)
 	(label "BTN1"
 		(at 358.14 43.18 0)
 		(effects
@@ -20860,16 +20870,6 @@
 			(justify left bottom)
 		)
 		(uuid "cc339706-b1fb-4c24-a523-5cd9879eddae")
-	)
-	(label "RELAY2_SET"
-		(at 132.08 240.03 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ce78838d-6a5e-42c1-97fd-a59ef1e42202")
 	)
 	(label "DISP_CS"
 		(at 397.51 40.64 180)
@@ -28069,16 +28069,16 @@
 	)
 	(symbol
 		(lib_id "*partsbox:2604-1102")
-		(at 279.4 110.49 0)
+		(at 279.4 113.03 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "7618cef8-b056-4987-89f7-5ed732e10165")
 		(property "Reference" "J2"
-			(at 281.94 110.4899 0)
+			(at 281.94 113.0301 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28087,7 +28087,7 @@
 			)
 		)
 		(property "Value" "OUT_1"
-			(at 281.94 113.0299 0)
+			(at 281.94 110.4901 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28096,7 +28096,7 @@
 			)
 		)
 		(property "Footprint" "MH_connectors:CONN2_2604-1102_WAG"
-			(at 279.4 110.49 0)
+			(at 279.4 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28105,7 +28105,7 @@
 			)
 		)
 		(property "Datasheet" "HTTPS://PARTSBOX.COM/I1KWDMV52F4H6V9WGVQNDT9J97J"
-			(at 279.4 110.49 0)
+			(at 279.4 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28114,7 +28114,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 279.4 110.49 0)
+			(at 279.4 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28123,7 +28123,7 @@
 			)
 		)
 		(property "Type" "Linked"
-			(at 279.4 110.49 0)
+			(at 279.4 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28132,7 +28132,7 @@
 			)
 		)
 		(property "Manufacturer" "WAGO"
-			(at 279.4 110.49 0)
+			(at 279.4 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28141,7 +28141,7 @@
 			)
 		)
 		(property "MPN" "2604-1102"
-			(at 279.4 110.49 0)
+			(at 279.4 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28150,7 +28150,7 @@
 			)
 		)
 		(property "PartsBox ID" "1kwdmv52f4h6v9wgvqndt9j97j"
-			(at 279.4 110.49 0)
+			(at 279.4 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28165,7 +28165,7 @@
 			(uuid "53ccb304-a764-4f67-85fc-1bc0b19d0c99")
 		)
 		(instances
-			(project ""
+			(project "main_board"
 				(path "/2310583b-51dd-4992-a296-db500aa0a56d"
 					(reference "J2")
 					(unit 1)
@@ -30376,16 +30376,16 @@
 	)
 	(symbol
 		(lib_id "*partsbox:2604-1102")
-		(at 379.73 110.49 0)
+		(at 379.73 113.03 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "8e6d008d-059f-4bfc-b853-f2c8cfcfa1a5")
 		(property "Reference" "J4"
-			(at 382.27 110.4899 0)
+			(at 382.27 113.0301 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30394,7 +30394,7 @@
 			)
 		)
 		(property "Value" "OUT_2"
-			(at 382.27 113.0299 0)
+			(at 382.27 110.4901 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30403,7 +30403,7 @@
 			)
 		)
 		(property "Footprint" "MH_connectors:CONN2_2604-1102_WAG"
-			(at 379.73 110.49 0)
+			(at 379.73 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30412,7 +30412,7 @@
 			)
 		)
 		(property "Datasheet" "HTTPS://PARTSBOX.COM/I1KWDMV52F4H6V9WGVQNDT9J97J"
-			(at 379.73 110.49 0)
+			(at 379.73 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30421,7 +30421,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 379.73 110.49 0)
+			(at 379.73 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30430,7 +30430,7 @@
 			)
 		)
 		(property "Type" "Linked"
-			(at 379.73 110.49 0)
+			(at 379.73 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30439,7 +30439,7 @@
 			)
 		)
 		(property "Manufacturer" "WAGO"
-			(at 379.73 110.49 0)
+			(at 379.73 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30448,7 +30448,7 @@
 			)
 		)
 		(property "MPN" "2604-1102"
-			(at 379.73 110.49 0)
+			(at 379.73 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30457,7 +30457,7 @@
 			)
 		)
 		(property "PartsBox ID" "1kwdmv52f4h6v9wgvqndt9j97j"
-			(at 379.73 110.49 0)
+			(at 379.73 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
