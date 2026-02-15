@@ -288,7 +288,7 @@
 		(path "/98b8276a-14f6-43de-91f3-b9d73f4eadb4")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -0.237258 0.5225)
 			(end 0.237258 0.5225)
@@ -483,7 +483,7 @@
 		(path "/cb6f1188-5990-465d-b1c8-c6373deba422")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -1.61 -0.85)
 			(end 1.05 -0.85)
@@ -907,7 +907,7 @@
 		(path "/a4f7321c-9f94-4ed7-8db6-3415f4f814af")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -14 -5.5)
 			(end 14 -5.5)
@@ -1136,7 +1136,7 @@
 		(path "/b933fca4-edcb-4562-ad78-5c01927dc098")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -2.75 -1)
 			(end -2.75 1)
@@ -1773,7 +1773,7 @@
 		(path "/e657134d-8691-4484-819e-64e9976f0bcf")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -1.61 -0.85)
 			(end 1.05 -0.85)
@@ -2098,7 +2098,7 @@
 		(path "/c2393693-d831-4e77-8303-e3e4658e7c9f")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -1.61 -0.85)
 			(end 1.05 -0.85)
@@ -2421,7 +2421,7 @@
 		(path "/026156d0-dc0e-47ab-8f48-87388804e2b9")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -0.237258 -0.5225)
 			(end 0.237258 -0.5225)
@@ -2616,7 +2616,7 @@
 		(path "/d2fda84a-99cb-4f20-98c9-66d784a16d68")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -0.98 1.1)
 			(end 0.99 1.1)
@@ -2933,7 +2933,7 @@
 		(path "/065e09eb-a440-41bf-b0d3-f3325ca3ff62")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -1.61 -0.85)
 			(end -1.61 0.85)
@@ -3258,7 +3258,7 @@
 		(path "/0a1ed656-01dd-4fda-9963-cd3d1b6ce8e4")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -2.75 -1)
 			(end -2.75 1)
@@ -3796,7 +3796,7 @@
 		(path "/3a3d10da-0a64-44a2-a048-e1c75fceeabd")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -2.8 -2)
 			(end -2.8 2)
@@ -4130,7 +4130,7 @@
 		(path "/01173c62-0f85-44d6-850b-dc28292f7cde")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -2.75 -1)
 			(end -2.75 1)
@@ -4668,7 +4668,7 @@
 		(path "/11e40d34-57c0-48be-838f-e073cb25f807")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -0.75 -0.86)
 			(end 0.75 -0.86)
@@ -5095,7 +5095,7 @@
 		(path "/fa9650d6-8e07-43cc-b7bd-41a3648a876a")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -1.61 -0.85)
 			(end -1.61 0.85)
@@ -5431,7 +5431,7 @@
 		(path "/76fefc73-12dd-444d-a59d-9d2da1ef83d3")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -1.685 0.96)
 			(end 1 0.96)
@@ -5675,7 +5675,7 @@
 		(path "/b819f100-99bc-4f5f-8f91-fb7c2746fa34")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -0.14058 0.51)
 			(end 0.14058 0.51)
@@ -5868,7 +5868,7 @@
 		(path "/2e528f2e-5c64-4011-8e0b-ae5f585c0fa1")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -0.14058 -0.51)
 			(end 0.14058 -0.51)
@@ -6074,7 +6074,7 @@
 		(path "/439e70bd-0c82-4eb8-8402-eb2a6546a67a")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -1.685 -0.96)
 			(end -1.685 0.96)
@@ -6413,11 +6413,23 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "22f86233-e74d-4350-841c-21694f8f4ec0")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Resistor_SMD:R_0603_1608Metric")
 		(path "/cc46715a-ea8d-4b59-a3c7-9284cf32e066")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -0.237258 -0.5225)
 			(end 0.237258 -0.5225)
@@ -6612,7 +6624,7 @@
 		(path "/bb89cab9-b97a-4359-b356-cb8f735fb698")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -1.61 -0.85)
 			(end 1.05 -0.85)
@@ -6937,7 +6949,7 @@
 		(path "/ae97994c-ff37-4ff7-beb5-975d4b2ec3bd")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -2.75 -1)
 			(end -2.75 1)
@@ -7486,7 +7498,7 @@
 		(path "/a4d62ae6-8d71-4429-b437-37ba8be6620d")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -1.685 0.96)
 			(end 1 0.96)
@@ -7676,6 +7688,18 @@
 					(thickness 0.15)
 				)
 				(justify mirror)
+			)
+		)
+		(property "LCSC" "C202112"
+			(at 0 0 0)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "806c60bf-52b2-48a9-8c59-c5ad2124c380")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
 			)
 		)
 		(path "/02e3788c-2960-44e8-84a4-1efd77a4dec8")
@@ -8708,6 +8732,18 @@
 				(justify mirror)
 			)
 		)
+		(property "LCSC" "C21120"
+			(at 0 0 0)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "a690cad6-83b1-43fe-97f9-c1038ef801a3")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Capacitor_SMD:C_0603_1608Metric")
 		(path "/84d72d81-b7d1-42cc-9d59-f7fd838b0f2a")
 		(sheetname "/")
@@ -9524,7 +9560,7 @@
 		(path "/8454ae24-72e0-4523-af49-ff03c0bd79fb")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -0.261252 0.735)
 			(end 0.261252 0.735)
@@ -10814,7 +10850,7 @@
 		(path "/8b3527e1-3d15-49d6-b11d-6772f95d0ff7")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -0.261252 0.735)
 			(end 0.261252 0.735)
@@ -11543,7 +11579,7 @@
 		(path "/6c2e6481-e240-4afc-b333-5b13a495efb8")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -2.11 2.11)
 			(end 2.11 2.11)
@@ -12200,7 +12236,7 @@
 		(path "/014b61b6-a743-4f52-8602-efaf696d6ed2")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -2.36 -1)
 			(end 1.65 -1)
@@ -12944,6 +12980,18 @@
 				(justify mirror)
 			)
 		)
+		(property "LCSC" "C22935"
+			(at 0 0 0)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "a1117366-6d03-4c5a-9d06-93102e354f1b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Resistor_SMD:R_0603_1608Metric")
 		(path "/07587313-ee7f-4a09-8cef-fc7aeb13c82b")
 		(sheetname "/")
@@ -13348,6 +13396,18 @@
 				(justify mirror)
 			)
 		)
+		(property "LCSC" "C15849"
+			(at 0 0 0)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "92f819bc-86b2-4165-b375-739a58e7a4c6")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Capacitor_SMD:C_0603_1608Metric")
 		(path "/b075798c-17ea-42a4-b0a1-1ef0851a2088")
 		(sheetname "/")
@@ -13498,7 +13558,7 @@
 		(path "/e2069ab2-538d-4a7b-8a2b-c15693ad2790")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start 2.65 17.89)
 			(end 2.65 17.32)
@@ -15125,7 +15185,7 @@
 		(path "/4dff4c56-6f30-4316-b244-86f04cf70c1b")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -2 -2.1)
 			(end 2 -2.1)
@@ -15423,7 +15483,7 @@
 		(path "/6eb4a78a-fcab-46c3-8623-8fc280f9658b")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -0.14058 0.51)
 			(end 0.14058 0.51)
@@ -16881,7 +16941,7 @@
 		(path "/f50711cd-fd7f-462a-9187-d8f2fb68a4ee")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -0.237258 0.5225)
 			(end 0.237258 0.5225)
@@ -17079,6 +17139,18 @@
 					(thickness 0.15)
 				)
 				(justify mirror)
+			)
+		)
+		(property "LCSC" "C77336"
+			(at 0 0 0)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "b0f954a9-b0c1-4f1f-a5f6-3254d3b72887")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
 			)
 		)
 		(property ki_fp_filters "Diode_SMD:D_SOD-123")
@@ -17625,6 +17697,18 @@
 				(justify mirror)
 			)
 		)
+		(property "LCSC" "C22939"
+			(at 0 0 0)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "899506c3-25e1-4bd4-8a48-a26e00ec835c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Resistor_SMD:R_0603_1608Metric")
 		(path "/ee62e7a7-5cba-4984-b0e9-75fbca660924")
 		(sheetname "/")
@@ -17827,6 +17911,18 @@
 				(justify mirror)
 			)
 		)
+		(property "LCSC" "C25804"
+			(at 0 0 0)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "7d699430-9596-4a93-8925-13da28b8b30c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Resistor_SMD:R_0603_1608Metric")
 		(path "/dfd7dd87-a980-4ce7-8594-91bf1a6a866c")
 		(sheetname "/")
@@ -18027,6 +18123,18 @@
 					(thickness 0.15)
 				)
 				(justify mirror)
+			)
+		)
+		(property "LCSC" "C14663"
+			(at 0 0 0)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "b2845756-413f-4583-b48b-bd2ad38563b4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
 			)
 		)
 		(property ki_fp_filters "Capacitor_SMD:C_0603_1608Metric")
@@ -18235,7 +18343,7 @@
 		(path "/9604413b-b201-4c34-a1d8-5ff62238b8a4")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -0.649252 1.16)
 			(end 0.735 1.16)
@@ -18781,6 +18889,18 @@
 					(thickness 0.15)
 				)
 				(justify mirror)
+			)
+		)
+		(property "LCSC" "C202118"
+			(at 0 0 0)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "d8e20f67-66d0-43fc-854b-c419707d092c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
 			)
 		)
 		(path "/78eb7e32-a812-46c5-9e19-d90166197074")
@@ -19797,7 +19917,7 @@
 		(path "/8b0b1126-fe05-4648-a769-ed846d436b1a")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -0.14058 -0.51)
 			(end 0.14058 -0.51)
