@@ -16864,7 +16864,7 @@
 			(uuid "d6d24999-f93c-481b-a329-efa66b3dc6ec")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_Push_1P1T_XKB_TS-1187A.step"
+		(model "${KIPRJMOD}/3d-models/TS-1187A-B-A-B.STEP"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -16872,7 +16872,7 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -0)
 			)
 		)
 	)
@@ -18506,7 +18506,7 @@
 			(uuid "aee78f11-aec2-4732-9c74-f88afb03abcc")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_Push_1P1T_XKB_TS-1187A.step"
+		(model "${KIPRJMOD}/3d-models/TS-1187A-B-A-B.STEP"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -18514,7 +18514,7 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -0)
 			)
 		)
 	)
@@ -44706,8 +44706,8 @@
 		(polygon
 			(pts
 				(xy 61.75 153) (xy 76.25 153) (xy 76.25 146.75) (xy 125.5 146.75) (xy 125.5 153) (xy 149.5 153)
-				(xy 149.5 50.5) (xy 77.5 50.5) (xy 77.5 64.25) (xy 73.25 64.25) (xy 73.25 139.25) (xy 73.25 139.25)
-				(xy 73.25 143) (xy 61.75 143) (xy 61.75 146.25) (xy 61.75 146.25)
+				(xy 149.5 50.5) (xy 77.5 50.5) (xy 77.5 64.25) (xy 73.25 64.25) (xy 73.25 139.25) (xy 73.25 143)
+				(xy 61.75 143) (xy 61.75 146.25)
 			)
 		)
 		(filled_polygon

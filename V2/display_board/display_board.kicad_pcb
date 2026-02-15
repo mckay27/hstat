@@ -1552,7 +1552,7 @@
 			(uuid "d1564b80-911b-4b9a-8e0b-d80ec3bbcf6a")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_Push_1P1T_XKB_TS-1187A.step"
+		(model "${KIPRJMOD}/3d-models/TS-1187A-B-A-B.STEP"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1560,7 +1560,7 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -0)
 			)
 		)
 	)
@@ -2811,7 +2811,7 @@
 			(uuid "1271de9e-c4b8-49cb-9f2f-8b3d4f8ffeae")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/OptoDevice.3dshapes/Lite-On_LTR-303ALS-01.step"
+		(model "${KIPRJMOD}/3d-models/LTR-303ALS-01_LTO.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -3674,7 +3674,7 @@
 			(uuid "2755b30f-d097-4c6b-8e35-f3b3fca064b2")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_Push_1P1T_XKB_TS-1187A.step"
+		(model "${KIPRJMOD}/3d-models/TS-1187A-B-A-B.STEP"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -3682,7 +3682,7 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -0)
 			)
 		)
 	)
@@ -4546,7 +4546,7 @@
 			(uuid "860e3b5d-b324-4dca-89e8-505050b7db56")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_Push_1P1T_XKB_TS-1187A.step"
+		(model "${KIPRJMOD}/3d-models/TS-1187A-B-A-B.STEP"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -4554,7 +4554,7 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -0)
 			)
 		)
 	)
@@ -7353,7 +7353,7 @@
 			(uuid "9aab5a64-ae39-4d3c-b565-7eb34c786a1a")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_Push_1P1T_XKB_TS-1187A.step"
+		(model "${KIPRJMOD}/3d-models/TS-1187A-B-A-B.STEP"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -7361,7 +7361,7 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -0)
 			)
 		)
 	)
