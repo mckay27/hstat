@@ -2436,6 +2436,183 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "*partsbox:H8VHD3B"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_TVS"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_SOD-323"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "HTTPS://PARTSBOX.COM/I1BFDXCM614J8FBQDYAQ958FZNW"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Type" "Linked"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "Litesemi"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "MPN" "H8VHD3B"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "PartsBox ID" "1bfdxcm614j8fbqdyaq958fznw"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Diode_SMD:D_SOD-323"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "H8VHD3B_0_1"
+				(polyline
+					(pts
+						(xy -2.54 1.27) (xy -2.54 -1.27) (xy 2.54 1.27) (xy 2.54 -1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 1.27) (xy 0 1.27) (xy 0 -1.27) (xy -0.508 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "H8VHD3B_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "*partsbox:KT-0805G"
 			(pin_numbers
 				(hide yes)
@@ -7124,7 +7301,7 @@
 				(pin power_in line
 					(at -2.54 7.62 0)
 					(length 2.54)
-					(name "GND"
+					(name "SCL"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7142,7 +7319,7 @@
 				(pin power_in line
 					(at -2.54 5.08 0)
 					(length 2.54)
-					(name "VDD"
+					(name "SDA"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7160,7 +7337,7 @@
 				(pin input line
 					(at -2.54 2.54 0)
 					(length 2.54)
-					(name "RST"
+					(name "INT"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7178,7 +7355,7 @@
 				(pin output line
 					(at -2.54 0 0)
 					(length 2.54)
-					(name "INT"
+					(name "RST"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7196,7 +7373,7 @@
 				(pin bidirectional line
 					(at -2.54 -2.54 0)
 					(length 2.54)
-					(name "SDA"
+					(name "VDD"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7214,7 +7391,7 @@
 				(pin input line
 					(at -2.54 -5.08 0)
 					(length 2.54)
-					(name "SCL"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7764,7 +7941,7 @@
 	)
 	(text "LEDS"
 		(exclude_from_sim no)
-		(at 97.028 160.782 0)
+		(at 80.01 159.512 0)
 		(effects
 			(font
 				(size 3.81 3.81)
@@ -7853,7 +8030,7 @@
 		(uuid "12ebc923-5d48-4570-8c09-94909958f6bd")
 	)
 	(junction
-		(at 44.45 191.77)
+		(at 45.72 191.77)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "15cd69f2-9a3c-48b9-8687-99c4a22c7a20")
@@ -7865,7 +8042,7 @@
 		(uuid "1f3ce0a0-58ac-415d-9d14-e25769693412")
 	)
 	(junction
-		(at 260.35 123.19)
+		(at 260.35 113.03)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2a320fa1-b93f-416e-b116-3a423adb08a7")
@@ -7877,13 +8054,19 @@
 		(uuid "2cc7251a-aec5-4110-a5d7-ce3ee850deb5")
 	)
 	(junction
-		(at 242.57 123.19)
+		(at 242.57 113.03)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3042d66d-f3d1-4d50-b43a-3acdd79f5294")
 	)
 	(junction
-		(at 240.03 133.35)
+		(at 120.65 165.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3302fe4f-a78d-4180-b575-75ad941ad0b4")
+	)
+	(junction
+		(at 240.03 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "39acffa1-ef17-40b6-bc42-3aeac83b7e28")
@@ -7919,7 +8102,7 @@
 		(uuid "5dd9c958-34df-4cce-808f-3b1f9fde4b59")
 	)
 	(junction
-		(at 260.35 133.35)
+		(at 260.35 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "635f584f-6d48-4f21-b90e-af4ece025887")
@@ -7931,7 +8114,7 @@
 		(uuid "691f823a-e470-4d71-8bc6-387c3e6dd6ef")
 	)
 	(junction
-		(at 237.49 143.51)
+		(at 237.49 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "71d74f94-9685-4fcf-b34b-8ee5c59aacff")
@@ -7985,7 +8168,7 @@
 		(uuid "a119e76b-d185-4523-ab85-79dba1f9e501")
 	)
 	(junction
-		(at 240.03 92.71)
+		(at 240.03 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a5234951-63b5-4ec8-a3c2-d09e77ca4194")
@@ -8003,7 +8186,7 @@
 		(uuid "bee25cc2-6683-4f56-9869-a4bda1087ae5")
 	)
 	(junction
-		(at 242.57 92.71)
+		(at 242.57 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c005c07c-9390-4e90-b136-2d4fae6f024e")
@@ -8027,13 +8210,13 @@
 		(uuid "ce771024-9923-4654-b183-2f1785073d11")
 	)
 	(junction
-		(at 260.35 143.51)
+		(at 260.35 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cec42821-d565-4b92-b0cf-41fbf6755147")
 	)
 	(junction
-		(at 245.11 113.03)
+		(at 245.11 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d107fdfb-c4d8-4e4f-b93d-edb40dcbba33")
@@ -8062,6 +8245,16 @@
 		(color 0 0 0 0)
 		(uuid "fd5281dd-be37-408c-84d4-b9d1f5513173")
 	)
+	(junction
+		(at 78.74 181.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fd69d082-c55e-40a8-9a73-cb3f72c866e3")
+	)
+	(no_connect
+		(at 100.33 181.61)
+		(uuid "b5964dd5-f4c9-4078-94b2-d1003f0aa398")
+	)
 	(wire
 		(pts
 			(xy 74.93 76.2) (xy 74.93 81.28)
@@ -8074,7 +8267,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 172.72) (xy 26.67 175.26)
+			(xy 27.94 172.72) (xy 27.94 175.26)
 		)
 		(stroke
 			(width 0)
@@ -8124,7 +8317,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 104.14) (xy 242.57 123.19)
+			(xy 242.57 93.98) (xy 242.57 113.03)
 		)
 		(stroke
 			(width 0)
@@ -8184,7 +8377,17 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 92.71) (xy 237.49 92.71)
+			(xy 78.74 191.77) (xy 78.74 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ca7d908-7562-4ac5-85c0-9db402ea870f")
+	)
+	(wire
+		(pts
+			(xy 240.03 82.55) (xy 237.49 82.55)
 		)
 		(stroke
 			(width 0)
@@ -8225,7 +8428,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 99.06) (xy 242.57 92.71)
+			(xy 242.57 88.9) (xy 242.57 82.55)
 		)
 		(stroke
 			(width 0)
@@ -8275,7 +8478,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 180.34) (xy 26.67 184.15)
+			(xy 27.94 180.34) (xy 27.94 184.15)
 		)
 		(stroke
 			(width 0)
@@ -8448,7 +8651,7 @@
 	)
 	(wire
 		(pts
-			(xy 256.54 143.51) (xy 260.35 143.51)
+			(xy 256.54 133.35) (xy 260.35 133.35)
 		)
 		(stroke
 			(width 0)
@@ -8458,7 +8661,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 191.77) (xy 44.45 189.23)
+			(xy 45.72 191.77) (xy 45.72 189.23)
 		)
 		(stroke
 			(width 0)
@@ -8478,7 +8681,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 191.77) (xy 46.99 191.77)
+			(xy 45.72 191.77) (xy 48.26 191.77)
 		)
 		(stroke
 			(width 0)
@@ -8559,7 +8762,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 176.53) (xy 46.99 176.53)
+			(xy 38.1 176.53) (xy 48.26 176.53)
 		)
 		(stroke
 			(width 0)
@@ -8569,7 +8772,7 @@
 	)
 	(wire
 		(pts
-			(xy 260.35 133.35) (xy 260.35 143.51)
+			(xy 260.35 123.19) (xy 260.35 133.35)
 		)
 		(stroke
 			(width 0)
@@ -8599,7 +8802,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 133.35) (xy 246.38 133.35)
+			(xy 240.03 123.19) (xy 246.38 123.19)
 		)
 		(stroke
 			(width 0)
@@ -8627,6 +8830,16 @@
 			(type default)
 		)
 		(uuid "37a328db-71bf-415a-8af7-6ee1307fb214")
+	)
+	(wire
+		(pts
+			(xy 120.65 175.26) (xy 120.65 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37eb7c7e-028a-4135-9045-5690db63e6d9")
 	)
 	(polyline
 		(pts
@@ -8733,7 +8946,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 143.51) (xy 237.49 143.51)
+			(xy 229.87 133.35) (xy 237.49 133.35)
 		)
 		(stroke
 			(width 0)
@@ -8743,7 +8956,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 99.06) (xy 245.11 92.71)
+			(xy 245.11 88.9) (xy 245.11 82.55)
 		)
 		(stroke
 			(width 0)
@@ -8773,7 +8986,17 @@
 	)
 	(wire
 		(pts
-			(xy 260.35 123.19) (xy 260.35 133.35)
+			(xy 120.65 167.64) (xy 120.65 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47bf70c2-0e04-4896-98de-1d9b53887189")
+	)
+	(wire
+		(pts
+			(xy 260.35 113.03) (xy 260.35 123.19)
 		)
 		(stroke
 			(width 0)
@@ -8811,6 +9034,16 @@
 			(type default)
 		)
 		(uuid "493936c3-4f3c-44fb-a299-854c83a1f2b6")
+	)
+	(wire
+		(pts
+			(xy 240.03 149.86) (xy 240.03 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dd673b0-cbf3-4405-9515-95472f240abc")
 	)
 	(wire
 		(pts
@@ -8986,7 +9219,7 @@
 	)
 	(wire
 		(pts
-			(xy 256.54 123.19) (xy 260.35 123.19)
+			(xy 256.54 113.03) (xy 260.35 113.03)
 		)
 		(stroke
 			(width 0)
@@ -9016,7 +9249,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 181.61) (xy 46.99 181.61)
+			(xy 38.1 181.61) (xy 48.26 181.61)
 		)
 		(stroke
 			(width 0)
@@ -9056,7 +9289,7 @@
 	)
 	(wire
 		(pts
-			(xy 256.54 113.03) (xy 260.35 113.03)
+			(xy 256.54 102.87) (xy 260.35 102.87)
 		)
 		(stroke
 			(width 0)
@@ -9073,6 +9306,16 @@
 			(type default)
 		)
 		(uuid "608cdf6d-d035-4e32-8375-6c05307bc811")
+	)
+	(wire
+		(pts
+			(xy 245.11 149.86) (xy 245.11 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64b9d3cf-f5e9-4fe4-a477-a85b30faf3f3")
 	)
 	(wire
 		(pts
@@ -9103,6 +9346,16 @@
 			(type default)
 		)
 		(uuid "65acdc27-e3bd-4ecd-9119-6ad31947c056")
+	)
+	(wire
+		(pts
+			(xy 242.57 149.86) (xy 242.57 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "660b55c8-1755-4103-ab0e-fb4ccbd72d98")
 	)
 	(wire
 		(pts
@@ -9178,7 +9431,7 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 181.61) (xy 85.09 181.61)
+			(xy 73.66 181.61) (xy 78.74 181.61)
 		)
 		(stroke
 			(width 0)
@@ -9188,7 +9441,7 @@
 	)
 	(wire
 		(pts
-			(xy 260.35 143.51) (xy 260.35 146.05)
+			(xy 260.35 133.35) (xy 260.35 135.89)
 		)
 		(stroke
 			(width 0)
@@ -9219,7 +9472,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 113.03) (xy 245.11 113.03)
+			(xy 229.87 102.87) (xy 245.11 102.87)
 		)
 		(stroke
 			(width 0)
@@ -9229,7 +9482,7 @@
 	)
 	(wire
 		(pts
-			(xy 260.35 113.03) (xy 260.35 123.19)
+			(xy 260.35 102.87) (xy 260.35 113.03)
 		)
 		(stroke
 			(width 0)
@@ -9411,6 +9664,16 @@
 	)
 	(wire
 		(pts
+			(xy 237.49 149.86) (xy 237.49 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "795eed10-8077-4bce-abd2-889521c5feb4")
+	)
+	(wire
+		(pts
 			(xy 54.61 49.53) (xy 54.61 44.45)
 		)
 		(stroke
@@ -9471,6 +9734,16 @@
 	)
 	(wire
 		(pts
+			(xy 242.57 113.03) (xy 242.57 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f748b7e-992f-4ac3-a171-933a1b609a5b")
+	)
+	(wire
+		(pts
 			(xy 143.51 85.09) (xy 143.51 91.44)
 		)
 		(stroke
@@ -9481,7 +9754,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 168.91) (xy 124.46 175.26)
+			(xy 146.05 165.1) (xy 146.05 171.45)
 		)
 		(stroke
 			(width 0)
@@ -9541,7 +9814,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 92.71) (xy 242.57 92.71)
+			(xy 245.11 82.55) (xy 242.57 82.55)
 		)
 		(stroke
 			(width 0)
@@ -9581,7 +9854,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 104.14) (xy 245.11 113.03)
+			(xy 245.11 93.98) (xy 245.11 102.87)
 		)
 		(stroke
 			(width 0)
@@ -9591,7 +9864,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 123.19) (xy 246.38 123.19)
+			(xy 242.57 113.03) (xy 246.38 113.03)
 		)
 		(stroke
 			(width 0)
@@ -9618,6 +9891,16 @@
 			(type default)
 		)
 		(uuid "8a08d2d2-6167-4b1e-b914-93a447124ae9")
+	)
+	(wire
+		(pts
+			(xy 120.65 165.1) (xy 125.73 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a5accb7-9a23-4630-bd2d-8adb40baff26")
 	)
 	(wire
 		(pts
@@ -9742,7 +10025,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 113.03) (xy 246.38 113.03)
+			(xy 245.11 102.87) (xy 246.38 102.87)
 		)
 		(stroke
 			(width 0)
@@ -9762,7 +10045,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 179.07) (xy 46.99 179.07)
+			(xy 38.1 179.07) (xy 48.26 179.07)
 		)
 		(stroke
 			(width 0)
@@ -9772,7 +10055,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 123.19) (xy 242.57 123.19)
+			(xy 229.87 113.03) (xy 242.57 113.03)
 		)
 		(stroke
 			(width 0)
@@ -9864,7 +10147,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 189.23) (xy 46.99 189.23)
+			(xy 45.72 189.23) (xy 48.26 189.23)
 		)
 		(stroke
 			(width 0)
@@ -9884,7 +10167,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 133.35) (xy 240.03 133.35)
+			(xy 229.87 123.19) (xy 240.03 123.19)
 		)
 		(stroke
 			(width 0)
@@ -9894,7 +10177,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 90.17) (xy 240.03 92.71)
+			(xy 240.03 80.01) (xy 240.03 82.55)
 		)
 		(stroke
 			(width 0)
@@ -10028,7 +10311,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 92.71) (xy 240.03 92.71)
+			(xy 242.57 82.55) (xy 240.03 82.55)
 		)
 		(stroke
 			(width 0)
@@ -10231,7 +10514,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 168.91) (xy 124.46 168.91)
+			(xy 143.51 165.1) (xy 146.05 165.1)
 		)
 		(stroke
 			(width 0)
@@ -10271,7 +10554,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 186.69) (xy 46.99 186.69)
+			(xy 41.91 186.69) (xy 48.26 186.69)
 		)
 		(stroke
 			(width 0)
@@ -10281,13 +10564,23 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 194.31) (xy 44.45 191.77)
+			(xy 45.72 194.31) (xy 45.72 191.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c82ac315-1eb7-4400-a14c-8a56b5ce76fd")
+	)
+	(wire
+		(pts
+			(xy 78.74 184.15) (xy 78.74 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8997094-3076-4e7f-82a3-fb172ed8a829")
 	)
 	(wire
 		(pts
@@ -10342,7 +10635,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 92.71) (xy 240.03 99.06)
+			(xy 240.03 82.55) (xy 240.03 88.9)
 		)
 		(stroke
 			(width 0)
@@ -10433,7 +10726,7 @@
 	)
 	(wire
 		(pts
-			(xy 237.49 143.51) (xy 246.38 143.51)
+			(xy 237.49 133.35) (xy 246.38 133.35)
 		)
 		(stroke
 			(width 0)
@@ -10485,7 +10778,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 104.14) (xy 240.03 133.35)
+			(xy 240.03 93.98) (xy 240.03 123.19)
 		)
 		(stroke
 			(width 0)
@@ -10535,7 +10828,7 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 168.91) (xy 104.14 168.91)
+			(xy 119.38 165.1) (xy 120.65 165.1)
 		)
 		(stroke
 			(width 0)
@@ -10563,6 +10856,36 @@
 		)
 		(uuid "e3fd2191-90ac-4a66-8366-fbd8abb66fd4")
 	)
+	(wire
+		(pts
+			(xy 245.11 102.87) (xy 245.11 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4ae90f9-8dc0-4aa2-b700-027020133f81")
+	)
+	(wire
+		(pts
+			(xy 78.74 181.61) (xy 85.09 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5c694e0-b7a9-4a6d-922d-56b21bcc7322")
+	)
+	(wire
+		(pts
+			(xy 237.49 142.24) (xy 237.49 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6420345-df0c-43dc-aad3-918ddd717b11")
+	)
 	(polyline
 		(pts
 			(xy 265.43 170.18) (xy 265.43 62.23)
@@ -10586,7 +10909,7 @@
 	)
 	(wire
 		(pts
-			(xy 256.54 133.35) (xy 260.35 133.35)
+			(xy 256.54 123.19) (xy 260.35 123.19)
 		)
 		(stroke
 			(width 0)
@@ -10596,7 +10919,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 184.15) (xy 46.99 184.15)
+			(xy 27.94 184.15) (xy 48.26 184.15)
 		)
 		(stroke
 			(width 0)
@@ -10708,7 +11031,7 @@
 	)
 	(wire
 		(pts
-			(xy 237.49 92.71) (xy 237.49 99.06)
+			(xy 237.49 82.55) (xy 237.49 88.9)
 		)
 		(stroke
 			(width 0)
@@ -10780,7 +11103,7 @@
 	)
 	(wire
 		(pts
-			(xy 237.49 104.14) (xy 237.49 143.51)
+			(xy 237.49 93.98) (xy 237.49 133.35)
 		)
 		(stroke
 			(width 0)
@@ -10830,7 +11153,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 168.91) (xy 116.84 168.91)
+			(xy 133.35 165.1) (xy 138.43 165.1)
 		)
 		(stroke
 			(width 0)
@@ -10848,8 +11171,18 @@
 		)
 		(uuid "febfeb95-21ae-460e-baca-1ac2c6c05ee8")
 	)
+	(wire
+		(pts
+			(xy 240.03 123.19) (xy 240.03 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffaa3361-d03d-4160-8380-94f5d3a31387")
+	)
 	(label "BTN3"
-		(at 229.87 133.35 0)
+		(at 229.87 123.19 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10899,7 +11232,7 @@
 		(uuid "0991988b-b9f7-4f86-8021-33808c4424f6")
 	)
 	(label "TS_INT"
-		(at 36.83 181.61 0)
+		(at 38.1 181.61 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10999,7 +11332,7 @@
 		(uuid "37721926-63bf-459a-866e-9f0da1ae396f")
 	)
 	(label "BTN2"
-		(at 229.87 123.19 0)
+		(at 229.87 113.03 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11009,7 +11342,7 @@
 		(uuid "3ab53458-c694-4604-a3c2-65db29f661ed")
 	)
 	(label "BTN1"
-		(at 229.87 113.03 0)
+		(at 229.87 102.87 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11059,7 +11392,7 @@
 		(uuid "5136a657-d749-4acd-b4a8-9ae7a9545b10")
 	)
 	(label "TS_RST"
-		(at 36.83 184.15 0)
+		(at 38.1 184.15 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11149,7 +11482,7 @@
 		(uuid "6f6aed17-6998-41e9-acf2-6f6d43056d00")
 	)
 	(label "I2C_SDA"
-		(at 36.83 179.07 0)
+		(at 38.1 179.07 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11169,7 +11502,7 @@
 		(uuid "720bf809-2683-4ebb-910d-fd903b7041e2")
 	)
 	(label "I2C_SCL"
-		(at 36.83 176.53 0)
+		(at 38.1 176.53 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11219,7 +11552,7 @@
 		(uuid "7e85f7cd-94e6-4e36-b259-4451fc6208b9")
 	)
 	(label "BTN4"
-		(at 229.87 143.51 0)
+		(at 229.87 133.35 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11349,7 +11682,7 @@
 		(uuid "c57068ee-b312-46bf-aeca-6897db35bf7d")
 	)
 	(label "LED_G"
-		(at 97.79 168.91 0)
+		(at 119.38 165.1 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11450,7 +11783,7 @@
 	)
 	(symbol
 		(lib_id "*partsbox:TS-1187A-B-A-B")
-		(at 251.46 123.19 0)
+		(at 251.46 113.03 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11459,7 +11792,7 @@
 		(fields_autoplaced yes)
 		(uuid "01173c62-0f85-44d6-850b-dc28292f7cde")
 		(property "Reference" "SW2"
-			(at 251.46 115.57 0)
+			(at 251.46 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11467,7 +11800,7 @@
 			)
 		)
 		(property "Value" "SW_Push"
-			(at 251.46 118.11 0)
+			(at 251.46 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11475,7 +11808,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_SMD:SW_Push_1P1T_XKB_TS-1187A"
-			(at 251.46 118.11 0)
+			(at 251.46 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11484,7 +11817,7 @@
 			)
 		)
 		(property "Datasheet" "HTTPS://PARTSBOX.COM/ID7WMFS844TK8N9K0T4VYGF6ZSA"
-			(at 251.46 118.11 0)
+			(at 251.46 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11493,7 +11826,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 251.46 123.19 0)
+			(at 251.46 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11502,7 +11835,7 @@
 			)
 		)
 		(property "Type" "Linked"
-			(at 251.46 123.19 0)
+			(at 251.46 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11511,7 +11844,7 @@
 			)
 		)
 		(property "Manufacturer" "XKB Connectivity"
-			(at 251.46 123.19 0)
+			(at 251.46 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11520,7 +11853,7 @@
 			)
 		)
 		(property "MPN" "TS-1187A-B-A-B"
-			(at 251.46 123.19 0)
+			(at 251.46 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11529,7 +11862,7 @@
 			)
 		)
 		(property "PartsBox ID" "d7wmfs844tk8n9k0t4vygf6zsa"
-			(at 251.46 123.19 0)
+			(at 251.46 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11965,6 +12298,112 @@
 		)
 	)
 	(symbol
+		(lib_id "*partsbox:H8VHD3B")
+		(at 78.74 187.96 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "065e09eb-a440-41bf-b0d3-f3325ca3ff62")
+		(property "Reference" "D13"
+			(at 81.28 186.6899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D_TVS"
+			(at 81.28 189.2299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 78.74 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "HTTPS://PARTSBOX.COM/I1BFDXCM614J8FBQDYAQ958FZNW"
+			(at 78.74 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 78.74 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Type" "Linked"
+			(at 78.74 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Litesemi"
+			(at 78.74 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "H8VHD3B"
+			(at 78.74 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PartsBox ID" "1bfdxcm614j8fbqdyaq958fznw"
+			(at 78.74 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "3e2ba856-ca4d-44ca-9bee-4658cc87fd81")
+		)
+		(pin "1"
+			(uuid "da14bb7c-6160-4714-8ffc-b03cba5b99dd")
+		)
+		(instances
+			(project "display_board"
+				(path "/b4a04f60-fca9-4e45-9f9f-b48317aec4e2"
+					(reference "D13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "*partsbox:MBR0530-TP")
 		(at 66.04 34.29 180)
 		(unit 1)
@@ -12176,7 +12615,7 @@
 	)
 	(symbol
 		(lib_id "*partsbox:TS-1187A-B-A-B")
-		(at 251.46 143.51 0)
+		(at 251.46 133.35 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12185,7 +12624,7 @@
 		(fields_autoplaced yes)
 		(uuid "0a1ed656-01dd-4fda-9963-cd3d1b6ce8e4")
 		(property "Reference" "SW4"
-			(at 251.46 135.89 0)
+			(at 251.46 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12193,7 +12632,7 @@
 			)
 		)
 		(property "Value" "SW_Push"
-			(at 251.46 138.43 0)
+			(at 251.46 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12201,7 +12640,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_SMD:SW_Push_1P1T_XKB_TS-1187A"
-			(at 251.46 138.43 0)
+			(at 251.46 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12210,7 +12649,7 @@
 			)
 		)
 		(property "Datasheet" "HTTPS://PARTSBOX.COM/ID7WMFS844TK8N9K0T4VYGF6ZSA"
-			(at 251.46 138.43 0)
+			(at 251.46 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12219,7 +12658,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 251.46 143.51 0)
+			(at 251.46 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12228,7 +12667,7 @@
 			)
 		)
 		(property "Type" "Linked"
-			(at 251.46 143.51 0)
+			(at 251.46 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12237,7 +12676,7 @@
 			)
 		)
 		(property "Manufacturer" "XKB Connectivity"
-			(at 251.46 143.51 0)
+			(at 251.46 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12246,7 +12685,7 @@
 			)
 		)
 		(property "MPN" "TS-1187A-B-A-B"
-			(at 251.46 143.51 0)
+			(at 251.46 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12255,7 +12694,7 @@
 			)
 		)
 		(property "PartsBox ID" "d7wmfs844tk8n9k0t4vygf6zsa"
-			(at 251.46 143.51 0)
+			(at 251.46 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12273,6 +12712,72 @@
 			(project "display_board"
 				(path "/b4a04f60-fca9-4e45-9f9f-b48317aec4e2"
 					(reference "SW4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 78.74 194.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0d9c406c-03aa-4b40-b4eb-86c4960e3342")
+		(property "Reference" "#PWR045"
+			(at 78.74 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 78.74 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 78.74 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 78.74 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "eae8ec8c-3e02-4dbc-b8da-4efee46997db")
+		)
+		(instances
+			(project "display_board"
+				(path "/b4a04f60-fca9-4e45-9f9f-b48317aec4e2"
+					(reference "#PWR045")
 					(unit 1)
 				)
 			)
@@ -12460,7 +12965,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 40.64 186.69 90)
+		(at 41.91 186.69 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12468,7 +12973,7 @@
 		(dnp no)
 		(uuid "12527236-b9ee-4903-b38d-3aba5e427264")
 		(property "Reference" "#PWR07"
-			(at 44.45 186.69 0)
+			(at 45.72 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12477,7 +12982,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 35.56 186.69 90)
+			(at 36.83 186.69 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12485,7 +12990,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 40.64 186.69 0)
+			(at 41.91 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12494,7 +12999,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 40.64 186.69 0)
+			(at 41.91 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12503,7 +13008,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 40.64 186.69 0)
+			(at 41.91 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12657,7 +13162,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 240.03 90.17 0)
+		(at 240.03 80.01 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12666,7 +13171,7 @@
 		(fields_autoplaced yes)
 		(uuid "1e4ec1cd-2b9d-4a6b-8922-f2635d6f5d1a")
 		(property "Reference" "#PWR034"
-			(at 240.03 93.98 0)
+			(at 240.03 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12675,7 +13180,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 240.03 85.09 0)
+			(at 240.03 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12683,7 +13188,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 240.03 90.17 0)
+			(at 240.03 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12692,7 +13197,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 240.03 90.17 0)
+			(at 240.03 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12701,7 +13206,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 240.03 90.17 0)
+			(at 240.03 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13059,6 +13564,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 240.03 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "300af45e-7d0a-4d5b-ade1-b65b176ce26e")
+		(property "Reference" "#PWR027"
+			(at 240.03 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 240.03 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 240.03 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 240.03 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 240.03 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f9507cfa-7d43-411a-aaf4-09aaeedc721e")
+		)
+		(instances
+			(project "display_board"
+				(path "/b4a04f60-fca9-4e45-9f9f-b48317aec4e2"
+					(reference "#PWR027")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 33.02 133.35 0)
 		(unit 1)
@@ -13132,10 +13703,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "3a3d10da-0a64-44a2-a048-e1c75fceeabd")
 		(property "Reference" "D6"
-			(at 106.68 175.1898 0)
+			(at 94.996 173.228 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13143,7 +13713,7 @@
 			)
 		)
 		(property "Value" "SK6812MINI"
-			(at 106.68 177.7298 0)
+			(at 99.314 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13238,7 +13808,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 26.67 172.72 0)
+		(at 27.94 172.72 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13246,7 +13816,7 @@
 		(dnp no)
 		(uuid "40c5eb75-4848-427d-8ee9-fbd838c0777e")
 		(property "Reference" "#PWR04"
-			(at 26.67 176.53 0)
+			(at 27.94 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13255,7 +13825,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 26.67 167.64 0)
+			(at 27.94 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13263,7 +13833,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 26.67 172.72 0)
+			(at 27.94 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13272,7 +13842,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 26.67 172.72 0)
+			(at 27.94 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13281,7 +13851,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 26.67 172.72 0)
+			(at 27.94 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13369,7 +13939,7 @@
 	)
 	(symbol
 		(lib_id "*partsbox:KT-0805G")
-		(at 107.95 168.91 180)
+		(at 129.54 165.1 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13378,7 +13948,7 @@
 		(fields_autoplaced yes)
 		(uuid "439e70bd-0c82-4eb8-8402-eb2a6546a67a")
 		(property "Reference" "D5"
-			(at 109.5375 161.29 0)
+			(at 131.1275 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13386,7 +13956,7 @@
 			)
 		)
 		(property "Value" "GREEN"
-			(at 109.5375 163.83 0)
+			(at 131.1275 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13394,7 +13964,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
-			(at 107.95 168.91 0)
+			(at 129.54 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13403,7 +13973,7 @@
 			)
 		)
 		(property "Datasheet" "HTTPS://PARTSBOX.COM/I8CZZCQQZJEKMHB5HQVB6MD9NVP"
-			(at 107.95 168.91 0)
+			(at 129.54 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13412,7 +13982,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 107.95 168.91 0)
+			(at 129.54 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13421,7 +13991,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 107.95 168.91 0)
+			(at 129.54 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13430,7 +14000,7 @@
 			)
 		)
 		(property "Type" "Local"
-			(at 107.95 168.91 0)
+			(at 129.54 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13439,7 +14009,7 @@
 			)
 		)
 		(property "Manufacturer" "Hubei KENTO Elec"
-			(at 107.95 168.91 0)
+			(at 129.54 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13448,7 +14018,7 @@
 			)
 		)
 		(property "MPN" "KT-0805G"
-			(at 107.95 168.91 0)
+			(at 129.54 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13457,7 +14027,7 @@
 			)
 		)
 		(property "PartsBox ID" "8czzcqqzjekmhb5hqvb6md9nvp"
-			(at 107.95 168.91 0)
+			(at 129.54 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13854,7 +14424,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 124.46 175.26 0)
+		(at 146.05 171.45 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13863,7 +14433,7 @@
 		(fields_autoplaced yes)
 		(uuid "4e1eceda-7ce2-4cc9-af0d-5ebd20585026")
 		(property "Reference" "#PWR021"
-			(at 124.46 181.61 0)
+			(at 146.05 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13872,7 +14442,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 124.46 180.34 0)
+			(at 146.05 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13880,7 +14450,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 124.46 175.26 0)
+			(at 146.05 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13889,7 +14459,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 124.46 175.26 0)
+			(at 146.05 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13898,7 +14468,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 124.46 175.26 0)
+			(at 146.05 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14052,6 +14622,72 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 245.11 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "55b9e9cb-b7d1-4313-a4c1-079c4c26b9db")
+		(property "Reference" "#PWR040"
+			(at 245.11 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 245.11 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 245.11 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 245.11 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 245.11 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1186042a-675f-40f0-9f52-aeda689c24f2")
+		)
+		(instances
+			(project "display_board"
+				(path "/b4a04f60-fca9-4e45-9f9f-b48317aec4e2"
+					(reference "#PWR040")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 163.83 133.35 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14118,7 +14754,7 @@
 	)
 	(symbol
 		(lib_id "MH_connectors:GDEY042T81_TOUCH")
-		(at 49.53 184.15 0)
+		(at 50.8 184.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14126,7 +14762,7 @@
 		(dnp no)
 		(uuid "5983efa8-0a8a-42e6-a234-6744f34b4b72")
 		(property "Reference" "TS1"
-			(at 57.15 182.8799 0)
+			(at 58.42 182.8799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14135,7 +14771,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 57.15 185.4199 0)
+			(at 58.42 185.4199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14145,7 +14781,7 @@
 			)
 		)
 		(property "Footprint" "Connector_FFC-FPC:Hirose_FH12-6S-0.5SH_1x06-1MP_P0.50mm_Horizontal"
-			(at 49.53 184.15 0)
+			(at 50.8 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14154,7 +14790,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 49.53 184.15 0)
+			(at 50.8 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14163,7 +14799,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 49.53 184.15 0)
+			(at 50.8 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14685,6 +15321,72 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 242.57 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "71e5361c-bf4a-43b0-9ec5-fbb81e1d841f")
+		(property "Reference" "#PWR028"
+			(at 242.57 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 242.57 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 242.57 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 242.57 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 242.57 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2a799495-40b8-4d97-a433-865f74ee4049")
+		)
+		(instances
+			(project "display_board"
+				(path "/b4a04f60-fca9-4e45-9f9f-b48317aec4e2"
+					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 92.71 191.77 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15013,7 +15715,7 @@
 	)
 	(symbol
 		(lib_id "*partsbox:0603-10Kohm")
-		(at 242.57 101.6 0)
+		(at 242.57 91.44 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15021,7 +15723,7 @@
 		(dnp no)
 		(uuid "7ef958c3-919d-4715-8dc2-eb7deb05683f")
 		(property "Reference" "R9"
-			(at 241.808 100.33 90)
+			(at 241.808 90.17 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15030,7 +15732,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 241.808 107.188 90)
+			(at 241.808 97.028 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15039,7 +15741,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 242.57 101.6 0)
+			(at 242.57 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15048,7 +15750,7 @@
 			)
 		)
 		(property "Datasheet" "HTTPS://PARTSBOX.COM/IDF49R6PNVCKV7AJXACV2MBGT3R"
-			(at 242.57 101.6 0)
+			(at 242.57 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15057,7 +15759,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 242.57 101.6 0)
+			(at 242.57 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15066,7 +15768,7 @@
 			)
 		)
 		(property "Type" "Meta"
-			(at 242.57 101.6 0)
+			(at 242.57 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15075,7 +15777,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 242.57 101.6 0)
+			(at 242.57 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15084,7 +15786,7 @@
 			)
 		)
 		(property "MPN" ""
-			(at 242.57 101.6 0)
+			(at 242.57 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15093,7 +15795,7 @@
 			)
 		)
 		(property "PartsBox ID" "df49r6pnvckv7ajxacv2mbgt3r"
-			(at 242.57 101.6 0)
+			(at 242.57 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15489,7 +16191,7 @@
 	)
 	(symbol
 		(lib_id "*partsbox:0603-10Kohm")
-		(at 240.03 101.6 0)
+		(at 240.03 91.44 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15497,7 +16199,7 @@
 		(dnp no)
 		(uuid "84d2b1a7-a439-4831-b6eb-427d2024cd9c")
 		(property "Reference" "R8"
-			(at 239.268 100.33 90)
+			(at 239.268 90.17 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15506,7 +16208,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 239.268 107.188 90)
+			(at 239.268 97.028 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15515,7 +16217,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 240.03 101.6 0)
+			(at 240.03 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15524,7 +16226,7 @@
 			)
 		)
 		(property "Datasheet" "HTTPS://PARTSBOX.COM/IDF49R6PNVCKV7AJXACV2MBGT3R"
-			(at 240.03 101.6 0)
+			(at 240.03 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15533,7 +16235,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 240.03 101.6 0)
+			(at 240.03 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15542,7 +16244,7 @@
 			)
 		)
 		(property "Type" "Meta"
-			(at 240.03 101.6 0)
+			(at 240.03 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15551,7 +16253,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 240.03 101.6 0)
+			(at 240.03 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15560,7 +16262,7 @@
 			)
 		)
 		(property "MPN" ""
-			(at 240.03 101.6 0)
+			(at 240.03 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15569,7 +16271,7 @@
 			)
 		)
 		(property "PartsBox ID" "df49r6pnvckv7ajxacv2mbgt3r"
-			(at 240.03 101.6 0)
+			(at 240.03 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16514,6 +17216,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 237.49 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a1c21ea5-424b-4b7b-952f-541420cf54b8")
+		(property "Reference" "#PWR096"
+			(at 237.49 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 237.49 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 237.49 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 237.49 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 237.49 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ef693503-ff22-4d03-ba32-3d2bca300f60")
+		)
+		(instances
+			(project "display_board"
+				(path "/b4a04f60-fca9-4e45-9f9f-b48317aec4e2"
+					(reference "#PWR096")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 184.15 119.38 0)
 		(unit 1)
@@ -16580,7 +17348,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 260.35 146.05 0)
+		(at 260.35 135.89 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16589,7 +17357,7 @@
 		(fields_autoplaced yes)
 		(uuid "a376ea8a-bdbc-4b06-987d-0950b697778d")
 		(property "Reference" "#PWR035"
-			(at 260.35 152.4 0)
+			(at 260.35 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16598,7 +17366,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 260.35 151.13 0)
+			(at 260.35 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16606,7 +17374,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 260.35 146.05 0)
+			(at 260.35 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16615,7 +17383,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 260.35 146.05 0)
+			(at 260.35 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16624,7 +17392,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 260.35 146.05 0)
+			(at 260.35 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16639,6 +17407,72 @@
 			(project "display_board"
 				(path "/b4a04f60-fca9-4e45-9f9f-b48317aec4e2"
 					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 120.65 177.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a43c27e7-e6ce-4f82-aa5b-161065a0c95c")
+		(property "Reference" "#PWR046"
+			(at 120.65 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 120.65 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 120.65 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.65 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 120.65 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "66da2aa7-e8e4-4165-9947-7d8356b9a6b6")
+		)
+		(instances
+			(project "display_board"
+				(path "/b4a04f60-fca9-4e45-9f9f-b48317aec4e2"
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
@@ -17046,7 +17880,7 @@
 	)
 	(symbol
 		(lib_id "*partsbox:TS-1187A-B-A-B")
-		(at 251.46 113.03 0)
+		(at 251.46 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17055,7 +17889,7 @@
 		(fields_autoplaced yes)
 		(uuid "ae97994c-ff37-4ff7-beb5-975d4b2ec3bd")
 		(property "Reference" "SW1"
-			(at 251.46 105.41 0)
+			(at 251.46 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17063,7 +17897,7 @@
 			)
 		)
 		(property "Value" "SW_Push"
-			(at 251.46 107.95 0)
+			(at 251.46 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17071,7 +17905,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_SMD:SW_Push_1P1T_XKB_TS-1187A"
-			(at 251.46 107.95 0)
+			(at 251.46 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17080,7 +17914,7 @@
 			)
 		)
 		(property "Datasheet" "HTTPS://PARTSBOX.COM/ID7WMFS844TK8N9K0T4VYGF6ZSA"
-			(at 251.46 107.95 0)
+			(at 251.46 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17089,7 +17923,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 251.46 113.03 0)
+			(at 251.46 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17098,7 +17932,7 @@
 			)
 		)
 		(property "Type" "Linked"
-			(at 251.46 113.03 0)
+			(at 251.46 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17107,7 +17941,7 @@
 			)
 		)
 		(property "Manufacturer" "XKB Connectivity"
-			(at 251.46 113.03 0)
+			(at 251.46 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17116,7 +17950,7 @@
 			)
 		)
 		(property "MPN" "TS-1187A-B-A-B"
-			(at 251.46 113.03 0)
+			(at 251.46 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17125,7 +17959,7 @@
 			)
 		)
 		(property "PartsBox ID" "d7wmfs844tk8n9k0t4vygf6zsa"
-			(at 251.46 113.03 0)
+			(at 251.46 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17841,7 +18675,7 @@
 	)
 	(symbol
 		(lib_id "*partsbox:TS-1187A-B-A-B")
-		(at 251.46 133.35 0)
+		(at 251.46 123.19 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17850,7 +18684,7 @@
 		(fields_autoplaced yes)
 		(uuid "b933fca4-edcb-4562-ad78-5c01927dc098")
 		(property "Reference" "SW3"
-			(at 251.46 125.73 0)
+			(at 251.46 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17858,7 +18692,7 @@
 			)
 		)
 		(property "Value" "SW_Push"
-			(at 251.46 128.27 0)
+			(at 251.46 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17866,7 +18700,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_SMD:SW_Push_1P1T_XKB_TS-1187A"
-			(at 251.46 128.27 0)
+			(at 251.46 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17875,7 +18709,7 @@
 			)
 		)
 		(property "Datasheet" "HTTPS://PARTSBOX.COM/ID7WMFS844TK8N9K0T4VYGF6ZSA"
-			(at 251.46 128.27 0)
+			(at 251.46 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17884,7 +18718,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 251.46 133.35 0)
+			(at 251.46 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17893,7 +18727,7 @@
 			)
 		)
 		(property "Type" "Linked"
-			(at 251.46 133.35 0)
+			(at 251.46 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17902,7 +18736,7 @@
 			)
 		)
 		(property "Manufacturer" "XKB Connectivity"
-			(at 251.46 133.35 0)
+			(at 251.46 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17911,7 +18745,7 @@
 			)
 		)
 		(property "MPN" "TS-1187A-B-A-B"
-			(at 251.46 133.35 0)
+			(at 251.46 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17920,7 +18754,7 @@
 			)
 		)
 		(property "PartsBox ID" "d7wmfs844tk8n9k0t4vygf6zsa"
-			(at 251.46 133.35 0)
+			(at 251.46 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18076,6 +18910,112 @@
 		)
 	)
 	(symbol
+		(lib_id "*partsbox:H8VHD3B")
+		(at 242.57 146.05 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bb89cab9-b97a-4359-b356-cb8f735fb698")
+		(property "Reference" "D11"
+			(at 241.3 139.446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D_TVS"
+			(at 245.11 147.3199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 242.57 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "HTTPS://PARTSBOX.COM/I1BFDXCM614J8FBQDYAQ958FZNW"
+			(at 242.57 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 242.57 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Type" "Linked"
+			(at 242.57 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Litesemi"
+			(at 242.57 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "H8VHD3B"
+			(at 242.57 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PartsBox ID" "1bfdxcm614j8fbqdyaq958fznw"
+			(at 242.57 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4a585c11-a249-4dd9-8b24-bd9989e2a718")
+		)
+		(pin "1"
+			(uuid "f317e115-278a-42d5-8c1b-1645c6905119")
+		)
+		(instances
+			(project "display_board"
+				(path "/b4a04f60-fca9-4e45-9f9f-b48317aec4e2"
+					(reference "D11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 162.56 92.71 0)
 		(unit 1)
@@ -18208,34 +19148,35 @@
 		)
 	)
 	(symbol
-		(lib_id "*partsbox:0603-10Kohm")
-		(at 237.49 101.6 0)
+		(lib_id "*partsbox:H8VHD3B")
+		(at 240.03 146.05 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c5626363-c3b4-4f14-aa3c-37b2de217436")
-		(property "Reference" "R7"
-			(at 236.728 100.33 90)
+		(uuid "c2393693-d831-4e77-8303-e3e4658e7c9f")
+		(property "Reference" "D10"
+			(at 238.76 139.446 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "10k"
-			(at 236.728 107.188 90)
+		(property "Value" "D_TVS"
+			(at 242.57 147.3199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 237.49 101.6 0)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 240.03 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18243,8 +19184,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "HTTPS://PARTSBOX.COM/IDF49R6PNVCKV7AJXACV2MBGT3R"
-			(at 237.49 101.6 0)
+		(property "Datasheet" "HTTPS://PARTSBOX.COM/I1BFDXCM614J8FBQDYAQ958FZNW"
+			(at 240.03 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18253,7 +19194,112 @@
 			)
 		)
 		(property "Description" ""
-			(at 237.49 101.6 0)
+			(at 240.03 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Type" "Linked"
+			(at 240.03 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Litesemi"
+			(at 240.03 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "H8VHD3B"
+			(at 240.03 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PartsBox ID" "1bfdxcm614j8fbqdyaq958fznw"
+			(at 240.03 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "efffd43a-8d08-4930-befb-dea8bfa1a3fd")
+		)
+		(pin "1"
+			(uuid "bf9184b0-3b55-4389-ae60-161dd16742c3")
+		)
+		(instances
+			(project "display_board"
+				(path "/b4a04f60-fca9-4e45-9f9f-b48317aec4e2"
+					(reference "D10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "*partsbox:0603-10Kohm")
+		(at 237.49 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c5626363-c3b4-4f14-aa3c-37b2de217436")
+		(property "Reference" "R7"
+			(at 236.728 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 236.728 97.028 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 237.49 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "HTTPS://PARTSBOX.COM/IDF49R6PNVCKV7AJXACV2MBGT3R"
+			(at 237.49 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 237.49 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18262,7 +19308,7 @@
 			)
 		)
 		(property "Type" "Meta"
-			(at 237.49 101.6 0)
+			(at 237.49 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18271,7 +19317,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 237.49 101.6 0)
+			(at 237.49 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18280,7 +19326,7 @@
 			)
 		)
 		(property "MPN" ""
-			(at 237.49 101.6 0)
+			(at 237.49 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18289,7 +19335,7 @@
 			)
 		)
 		(property "PartsBox ID" "df49r6pnvckv7ajxacv2mbgt3r"
-			(at 237.49 101.6 0)
+			(at 237.49 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18482,7 +19528,7 @@
 	)
 	(symbol
 		(lib_id "*partsbox:0603-10Kohm")
-		(at 245.11 101.6 0)
+		(at 245.11 91.44 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18490,7 +19536,7 @@
 		(dnp no)
 		(uuid "ca8286c4-132b-4c59-ad9f-ba19604f688d")
 		(property "Reference" "R10"
-			(at 244.348 100.33 90)
+			(at 244.348 90.17 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18499,7 +19545,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 244.348 107.188 90)
+			(at 244.348 97.028 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18508,7 +19554,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 245.11 101.6 0)
+			(at 245.11 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18517,7 +19563,7 @@
 			)
 		)
 		(property "Datasheet" "HTTPS://PARTSBOX.COM/IDF49R6PNVCKV7AJXACV2MBGT3R"
-			(at 245.11 101.6 0)
+			(at 245.11 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18526,7 +19572,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 245.11 101.6 0)
+			(at 245.11 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18535,7 +19581,7 @@
 			)
 		)
 		(property "Type" "Meta"
-			(at 245.11 101.6 0)
+			(at 245.11 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18544,7 +19590,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 245.11 101.6 0)
+			(at 245.11 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18553,7 +19599,7 @@
 			)
 		)
 		(property "MPN" ""
-			(at 245.11 101.6 0)
+			(at 245.11 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18562,7 +19608,7 @@
 			)
 		)
 		(property "PartsBox ID" "df49r6pnvckv7ajxacv2mbgt3r"
-			(at 245.11 101.6 0)
+			(at 245.11 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18586,33 +19632,35 @@
 		)
 	)
 	(symbol
-		(lib_id "*partsbox:0603-220ohm")
-		(at 119.38 168.91 90)
+		(lib_id "*partsbox:H8VHD3B")
+		(at 245.11 146.05 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cc46715a-ea8d-4b59-a3c7-9284cf32e066")
-		(property "Reference" "R5"
-			(at 119.38 162.56 90)
+		(uuid "cb6f1188-5990-465d-b1c8-c6373deba422")
+		(property "Reference" "D12"
+			(at 243.84 139.446 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "220R"
-			(at 119.38 165.1 90)
+		(property "Value" "D_TVS"
+			(at 247.65 147.3199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 119.38 168.91 0)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 245.11 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18620,8 +19668,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "HTTPS://PARTSBOX.COM/I1QGBWBRHS2JPE97GRC235ZPHTH"
-			(at 119.38 168.91 0)
+		(property "Datasheet" "HTTPS://PARTSBOX.COM/I1BFDXCM614J8FBQDYAQ958FZNW"
+			(at 245.11 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18630,7 +19678,111 @@
 			)
 		)
 		(property "Description" ""
-			(at 119.38 168.91 0)
+			(at 245.11 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Type" "Linked"
+			(at 245.11 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Litesemi"
+			(at 245.11 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "H8VHD3B"
+			(at 245.11 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PartsBox ID" "1bfdxcm614j8fbqdyaq958fznw"
+			(at 245.11 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d3544fa0-0f53-48fd-b26a-013305f21568")
+		)
+		(pin "1"
+			(uuid "126bde5e-0d2e-4c89-aba8-10b89c46452f")
+		)
+		(instances
+			(project "display_board"
+				(path "/b4a04f60-fca9-4e45-9f9f-b48317aec4e2"
+					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "*partsbox:0603-220ohm")
+		(at 140.97 165.1 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cc46715a-ea8d-4b59-a3c7-9284cf32e066")
+		(property "Reference" "R5"
+			(at 140.97 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "220R"
+			(at 140.97 161.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 140.97 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "HTTPS://PARTSBOX.COM/I1QGBWBRHS2JPE97GRC235ZPHTH"
+			(at 140.97 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 140.97 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18639,7 +19791,7 @@
 			)
 		)
 		(property "Type" "Meta"
-			(at 119.38 168.91 0)
+			(at 140.97 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18648,7 +19800,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 119.38 168.91 0)
+			(at 140.97 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18657,7 +19809,7 @@
 			)
 		)
 		(property "MPN" ""
-			(at 119.38 168.91 0)
+			(at 140.97 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18666,7 +19818,7 @@
 			)
 		)
 		(property "PartsBox ID" "1qgbwbrhs2jpe97grc235zphth"
-			(at 119.38 168.91 0)
+			(at 140.97 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19594,7 +20746,7 @@
 	)
 	(symbol
 		(lib_id "*partsbox:0603-10Kohm")
-		(at 26.67 177.8 0)
+		(at 27.94 177.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19603,7 +20755,7 @@
 		(fields_autoplaced yes)
 		(uuid "dfd7dd87-a980-4ce7-8594-91bf1a6a866c")
 		(property "Reference" "R4"
-			(at 29.21 176.5299 0)
+			(at 30.48 176.5299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19612,7 +20764,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 29.21 179.0699 0)
+			(at 30.48 179.0699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19621,7 +20773,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 26.67 177.8 0)
+			(at 27.94 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19630,7 +20782,7 @@
 			)
 		)
 		(property "Datasheet" "HTTPS://PARTSBOX.COM/IDF49R6PNVCKV7AJXACV2MBGT3R"
-			(at 26.67 177.8 0)
+			(at 27.94 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19639,7 +20791,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 26.67 177.8 0)
+			(at 27.94 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19648,7 +20800,7 @@
 			)
 		)
 		(property "Type" "Meta"
-			(at 26.67 177.8 0)
+			(at 27.94 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19657,7 +20809,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 26.67 177.8 0)
+			(at 27.94 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19666,7 +20818,7 @@
 			)
 		)
 		(property "MPN" ""
-			(at 26.67 177.8 0)
+			(at 27.94 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19675,7 +20827,7 @@
 			)
 		)
 		(property "PartsBox ID" "df49r6pnvckv7ajxacv2mbgt3r"
-			(at 26.67 177.8 0)
+			(at 27.94 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19839,6 +20991,112 @@
 			(project "display_board"
 				(path "/b4a04f60-fca9-4e45-9f9f-b48317aec4e2"
 					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "*partsbox:H8VHD3B")
+		(at 237.49 146.05 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e657134d-8691-4484-819e-64e9976f0bcf")
+		(property "Reference" "D9"
+			(at 236.474 140.462 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D_TVS"
+			(at 240.03 147.3199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 237.49 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "HTTPS://PARTSBOX.COM/I1BFDXCM614J8FBQDYAQ958FZNW"
+			(at 237.49 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 237.49 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Type" "Linked"
+			(at 237.49 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Litesemi"
+			(at 237.49 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "H8VHD3B"
+			(at 237.49 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PartsBox ID" "1bfdxcm614j8fbqdyaq958fznw"
+			(at 237.49 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "33cf7ccf-3067-4b05-be3d-d329c2b5a572")
+		)
+		(pin "1"
+			(uuid "9a6a83c1-d3a4-4d59-9aac-a3b51e937906")
+		)
+		(instances
+			(project "display_board"
+				(path "/b4a04f60-fca9-4e45-9f9f-b48317aec4e2"
+					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -20253,7 +21511,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 44.45 194.31 0)
+		(at 45.72 194.31 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -20262,7 +21520,7 @@
 		(fields_autoplaced yes)
 		(uuid "f46f6ed3-36c3-41d9-88a3-ed0c8d6e6ac8")
 		(property "Reference" "#PWR09"
-			(at 44.45 200.66 0)
+			(at 45.72 200.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20271,7 +21529,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 44.45 199.39 0)
+			(at 45.72 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20279,7 +21537,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 44.45 194.31 0)
+			(at 45.72 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20288,7 +21546,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 44.45 194.31 0)
+			(at 45.72 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20297,7 +21555,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 44.45 194.31 0)
+			(at 45.72 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20491,6 +21749,112 @@
 			(project "display_board"
 				(path "/b4a04f60-fca9-4e45-9f9f-b48317aec4e2"
 					(reference "JP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "*partsbox:H8VHD3B")
+		(at 120.65 171.45 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fa9650d6-8e07-43cc-b7bd-41a3648a876a")
+		(property "Reference" "D14"
+			(at 123.19 170.1799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D_TVS"
+			(at 123.19 172.7199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 120.65 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "HTTPS://PARTSBOX.COM/I1BFDXCM614J8FBQDYAQ958FZNW"
+			(at 120.65 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 120.65 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Type" "Linked"
+			(at 120.65 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Litesemi"
+			(at 120.65 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "H8VHD3B"
+			(at 120.65 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PartsBox ID" "1bfdxcm614j8fbqdyaq958fznw"
+			(at 120.65 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "78416314-b2c4-41a5-85a6-21b6a2e2e715")
+		)
+		(pin "1"
+			(uuid "ff2472ab-1ecd-490e-ba21-dbed6656db0b")
+		)
+		(instances
+			(project "display_board"
+				(path "/b4a04f60-fca9-4e45-9f9f-b48317aec4e2"
+					(reference "D14")
 					(unit 1)
 				)
 			)
