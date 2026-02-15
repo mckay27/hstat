@@ -15225,12 +15225,6 @@
 		(uuid "7a0c59b4-4de5-47a3-8969-5a3b7837d2f8")
 	)
 	(junction
-		(at 369.57 66.04)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "856fa277-7e91-4179-8d94-de4702c45a72")
-	)
-	(junction
 		(at 241.3 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -15763,7 +15757,7 @@
 	)
 	(wire
 		(pts
-			(xy 359.41 63.5) (xy 372.11 63.5)
+			(xy 358.14 63.5) (xy 372.11 63.5)
 		)
 		(stroke
 			(width 0)
@@ -15875,7 +15869,7 @@
 	)
 	(wire
 		(pts
-			(xy 359.41 40.64) (xy 372.11 40.64)
+			(xy 358.14 40.64) (xy 372.11 40.64)
 		)
 		(stroke
 			(width 0)
@@ -16301,7 +16295,7 @@
 	)
 	(wire
 		(pts
-			(xy 359.41 50.8) (xy 372.11 50.8)
+			(xy 358.14 50.8) (xy 372.11 50.8)
 		)
 		(stroke
 			(width 0)
@@ -16472,16 +16466,6 @@
 			(type default)
 		)
 		(uuid "39220d91-5ffd-4139-ace8-4a35fccced14")
-	)
-	(wire
-		(pts
-			(xy 369.57 60.96) (xy 369.57 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "394d0f05-6d76-466d-b296-f48060dca893")
 	)
 	(wire
 		(pts
@@ -16666,7 +16650,7 @@
 	)
 	(wire
 		(pts
-			(xy 359.41 43.18) (xy 372.11 43.18)
+			(xy 358.14 43.18) (xy 372.11 43.18)
 		)
 		(stroke
 			(width 0)
@@ -16789,7 +16773,7 @@
 	)
 	(wire
 		(pts
-			(xy 359.41 53.34) (xy 372.11 53.34)
+			(xy 358.14 53.34) (xy 372.11 53.34)
 		)
 		(stroke
 			(width 0)
@@ -17081,6 +17065,16 @@
 	)
 	(wire
 		(pts
+			(xy 358.14 60.96) (xy 372.11 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5758562c-a04e-4c46-aa70-6d0507c411d9")
+	)
+	(wire
+		(pts
 			(xy 124.46 234.95) (xy 149.86 234.95)
 		)
 		(stroke
@@ -17192,7 +17186,7 @@
 	)
 	(wire
 		(pts
-			(xy 359.41 48.26) (xy 372.11 48.26)
+			(xy 358.14 48.26) (xy 372.11 48.26)
 		)
 		(stroke
 			(width 0)
@@ -17305,6 +17299,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.08 181.61) (xy 149.86 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61c04752-9763-4c49-92fa-d356bc4d9640")
+	)
+	(wire
+		(pts
 			(xy 116.84 124.46) (xy 116.84 127)
 		)
 		(stroke
@@ -17315,7 +17319,7 @@
 	)
 	(wire
 		(pts
-			(xy 359.41 38.1) (xy 372.11 38.1)
+			(xy 358.14 38.1) (xy 372.11 38.1)
 		)
 		(stroke
 			(width 0)
@@ -17839,7 +17843,7 @@
 	)
 	(wire
 		(pts
-			(xy 359.41 55.88) (xy 372.11 55.88)
+			(xy 358.14 55.88) (xy 372.11 55.88)
 		)
 		(stroke
 			(width 0)
@@ -17906,16 +17910,6 @@
 			(type default)
 		)
 		(uuid "803d6b12-32bc-4524-8009-4cd1b0e633a8")
-	)
-	(wire
-		(pts
-			(xy 110.49 181.61) (xy 149.86 181.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "805775f3-b1e6-431a-bca9-c46487918488")
 	)
 	(wire
 		(pts
@@ -18928,7 +18922,7 @@
 	)
 	(wire
 		(pts
-			(xy 359.41 45.72) (xy 372.11 45.72)
+			(xy 358.14 45.72) (xy 372.11 45.72)
 		)
 		(stroke
 			(width 0)
@@ -19484,7 +19478,7 @@
 	)
 	(wire
 		(pts
-			(xy 372.11 58.42) (xy 359.41 58.42)
+			(xy 372.11 58.42) (xy 358.14 58.42)
 		)
 		(stroke
 			(width 0)
@@ -19532,16 +19526,6 @@
 			(type default)
 		)
 		(uuid "da94cf65-ce27-419e-93c0-676c0e899b86")
-	)
-	(wire
-		(pts
-			(xy 372.11 60.96) (xy 369.57 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "db6c259d-9acd-45a1-b1cf-f6e7a057f75c")
 	)
 	(wire
 		(pts
@@ -20257,6 +20241,16 @@
 		)
 		(uuid "09427d57-c47e-4523-9db1-7e8ce4a47ee2")
 	)
+	(label "PRESENCE_OUT"
+		(at 132.08 181.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "096ca905-5a88-431c-a3f9-34819f6763cd")
+	)
 	(label "SYSOFF"
 		(at 212.09 63.5 0)
 		(effects
@@ -20338,7 +20332,7 @@
 		(uuid "2d6a6ac2-e24f-4482-8098-679109bac607")
 	)
 	(label "I2C_SCL"
-		(at 359.41 40.64 0)
+		(at 358.14 40.64 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -20417,6 +20411,16 @@
 		)
 		(uuid "3c1ea46a-f369-4ad5-85b4-c732c8fc71ce")
 	)
+	(label "PRESENCE_OUT"
+		(at 358.14 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3c8e3226-6482-4135-bcbb-17ae5826e6d1")
+	)
 	(label "TS_INT"
 		(at 132.08 209.55 0)
 		(effects
@@ -20438,7 +20442,7 @@
 		(uuid "404fd638-f0e5-4572-ae1c-17a3923a4d97")
 	)
 	(label "BTN4"
-		(at 359.41 50.8 0)
+		(at 358.14 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -20528,7 +20532,7 @@
 		(uuid "5720a712-9347-4d85-bcc9-f279aa2f4536")
 	)
 	(label "PRESENCE_TX"
-		(at 359.41 55.88 0)
+		(at 358.14 55.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -20538,7 +20542,7 @@
 		(uuid "5aae9e73-bd08-4bb4-acc1-d119aaf27ac0")
 	)
 	(label "BTN3"
-		(at 359.41 48.26 0)
+		(at 358.14 48.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -20558,7 +20562,7 @@
 		(uuid "6872583b-63e7-4a94-8358-7f18a02f041e")
 	)
 	(label "BTN2"
-		(at 359.41 45.72 0)
+		(at 358.14 45.72 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -20648,7 +20652,7 @@
 		(uuid "86da8b1f-b178-4d4a-83ae-d21c49368b62")
 	)
 	(label "PRESENCE_RX"
-		(at 359.41 53.34 0)
+		(at 358.14 53.34 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -20718,7 +20722,7 @@
 		(uuid "99fb91ae-680d-4b31-b9e3-54a73c6a2e78")
 	)
 	(label "I2C_SDA"
-		(at 359.41 38.1 0)
+		(at 358.14 38.1 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -20798,7 +20802,7 @@
 		(uuid "b509a0a5-7603-45f0-9485-a64730c2ff40")
 	)
 	(label "LED_PWM"
-		(at 359.41 63.5 0)
+		(at 358.14 63.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -20838,7 +20842,7 @@
 		(uuid "c43089fb-eb04-4906-8544-0de9f788a76d")
 	)
 	(label "BTN1"
-		(at 359.41 43.18 0)
+		(at 358.14 43.18 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -20988,7 +20992,7 @@
 		(uuid "fd3071f0-d84b-4a5e-8530-9e040b2c6c3d")
 	)
 	(label "ADDR_LED"
-		(at 359.41 58.42 0)
+		(at 358.14 58.42 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -32565,71 +32569,6 @@
 			(project ""
 				(path "/2310583b-51dd-4992-a296-db500aa0a56d"
 					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 110.49 181.61 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "abe12f88-562e-4c02-9509-07dc0e34feff")
-		(property "Reference" "TP2"
-			(at 107.188 176.53 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "IO3"
-			(at 107.188 179.07 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
-			(at 110.49 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 110.49 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 110.49 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a62342d2-d7d2-47a2-9e3c-6c033e43878e")
-		)
-		(instances
-			(project "main_board"
-				(path "/2310583b-51dd-4992-a296-db500aa0a56d"
-					(reference "TP2")
 					(unit 1)
 				)
 			)
