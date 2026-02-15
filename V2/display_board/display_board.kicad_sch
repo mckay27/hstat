@@ -8060,12 +8060,6 @@
 		(uuid "3042d66d-f3d1-4d50-b43a-3acdd79f5294")
 	)
 	(junction
-		(at 120.65 165.1)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3302fe4f-a78d-4180-b575-75ad941ad0b4")
-	)
-	(junction
 		(at 240.03 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8240,12 +8234,6 @@
 		(uuid "f1d1e02f-af11-42b4-91a5-09d75536f908")
 	)
 	(junction
-		(at 191.77 156.21)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fd5281dd-be37-408c-84d4-b9d1f5513173")
-	)
-	(junction
 		(at 78.74 181.61)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8397,7 +8385,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 146.05) (xy 194.31 146.05)
+			(xy 180.34 146.05) (xy 194.31 146.05)
 		)
 		(stroke
 			(width 0)
@@ -8407,7 +8395,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 138.43) (xy 194.31 138.43)
+			(xy 180.34 138.43) (xy 194.31 138.43)
 		)
 		(stroke
 			(width 0)
@@ -8610,7 +8598,7 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 148.59) (xy 181.61 148.59)
+			(xy 194.31 148.59) (xy 180.34 148.59)
 		)
 		(stroke
 			(width 0)
@@ -8946,6 +8934,16 @@
 	)
 	(wire
 		(pts
+			(xy 180.34 151.13) (xy 194.31 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "440bbbda-f647-4a93-bdac-9e06a6f7ca2c")
+	)
+	(wire
+		(pts
 			(xy 229.87 133.35) (xy 237.49 133.35)
 		)
 		(stroke
@@ -9067,7 +9065,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 128.27) (xy 194.31 128.27)
+			(xy 180.34 128.27) (xy 194.31 128.27)
 		)
 		(stroke
 			(width 0)
@@ -9532,16 +9530,6 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 151.13) (xy 191.77 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f844584-c4d6-4c78-b1be-84c42414a4d7")
-	)
-	(wire
-		(pts
 			(xy 163.83 148.59) (xy 163.83 146.05)
 		)
 		(stroke
@@ -9593,7 +9581,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 143.51) (xy 194.31 143.51)
+			(xy 180.34 143.51) (xy 194.31 143.51)
 		)
 		(stroke
 			(width 0)
@@ -10157,7 +10145,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 140.97) (xy 194.31 140.97)
+			(xy 180.34 140.97) (xy 194.31 140.97)
 		)
 		(stroke
 			(width 0)
@@ -10236,16 +10224,6 @@
 			(color 0 194 0 1)
 		)
 		(uuid "ad969c3c-6dd8-4b4d-b423-c3d087d3c7bc")
-	)
-	(wire
-		(pts
-			(xy 191.77 151.13) (xy 191.77 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "adc13a9f-8ec8-46ec-8616-0b4d41968c0d")
 	)
 	(polyline
 		(pts
@@ -10373,7 +10351,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 133.35) (xy 194.31 133.35)
+			(xy 180.34 133.35) (xy 194.31 133.35)
 		)
 		(stroke
 			(width 0)
@@ -10464,7 +10442,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 130.81) (xy 194.31 130.81)
+			(xy 180.34 130.81) (xy 194.31 130.81)
 		)
 		(stroke
 			(width 0)
@@ -10828,16 +10806,6 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 165.1) (xy 120.65 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e235de49-7194-464c-91c1-bd2f2de2b04e")
-	)
-	(wire
-		(pts
 			(xy 92.71 171.45) (xy 92.71 173.99)
 		)
 		(stroke
@@ -10848,7 +10816,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 135.89) (xy 194.31 135.89)
+			(xy 180.34 135.89) (xy 194.31 135.89)
 		)
 		(stroke
 			(width 0)
@@ -10939,7 +10907,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 153.67) (xy 194.31 153.67)
+			(xy 180.34 153.67) (xy 194.31 153.67)
 		)
 		(stroke
 			(width 0)
@@ -11252,7 +11220,7 @@
 		(uuid "140761ca-8df3-4eb1-90c4-1544a7d31cbd")
 	)
 	(label "BTN4"
-		(at 181.61 140.97 0)
+		(at 180.34 140.97 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11321,8 +11289,18 @@
 		)
 		(uuid "3040c56a-438f-46d3-88d8-9db567048c4e")
 	)
+	(label "PRESENCE_OUT"
+		(at 180.34 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "32cd28b2-fe01-4ef5-9857-19f136718ace")
+	)
 	(label "BTN3"
-		(at 181.61 138.43 0)
+		(at 180.34 138.43 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11382,7 +11360,7 @@
 		(uuid "4d680e5e-69a1-4eda-abc3-90cf3c32893a")
 	)
 	(label "PRESENCE_TX"
-		(at 181.61 146.05 0)
+		(at 180.34 146.05 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11402,7 +11380,7 @@
 		(uuid "58fccc47-e71f-4c2b-a98e-fe8597c87bd4")
 	)
 	(label "BTN2"
-		(at 181.61 135.89 0)
+		(at 180.34 135.89 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11422,7 +11400,7 @@
 		(uuid "664c3d2c-780b-445c-8c0e-b99ed42a7299")
 	)
 	(label "I2C_SCL"
-		(at 181.61 130.81 0)
+		(at 180.34 130.81 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11522,7 +11500,7 @@
 		(uuid "7a4d48ec-59d2-4861-9324-e204013779e8")
 	)
 	(label "ADDR_LED"
-		(at 181.61 148.59 0)
+		(at 180.34 148.59 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11582,7 +11560,7 @@
 		(uuid "9814867a-5fd8-4810-97b9-05d6d9327cb5")
 	)
 	(label "PRESENCE_RX"
-		(at 181.61 143.51 0)
+		(at 180.34 143.51 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11602,7 +11580,7 @@
 		(uuid "a1a41061-eff9-4917-8696-07a13b97d0b9")
 	)
 	(label "BTN1"
-		(at 181.61 133.35 0)
+		(at 180.34 133.35 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11622,7 +11600,7 @@
 		(uuid "b0cadfb7-5af5-4178-b892-5dc00046514b")
 	)
 	(label "I2C_SDA"
-		(at 181.61 128.27 0)
+		(at 180.34 128.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11682,7 +11660,7 @@
 		(uuid "c57068ee-b312-46bf-aeca-6897db35bf7d")
 	)
 	(label "LED_G"
-		(at 119.38 165.1 0)
+		(at 120.65 165.1 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11752,7 +11730,7 @@
 		(uuid "eb02163b-d638-4234-b815-1e2141633f3f")
 	)
 	(label "LED_PWM"
-		(at 181.61 153.67 0)
+		(at 180.34 153.67 0)
 		(effects
 			(font
 				(size 1.27 1.27)
