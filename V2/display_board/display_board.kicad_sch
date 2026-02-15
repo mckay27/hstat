@@ -7308,7 +7308,7 @@
 							)
 						)
 					)
-					(number "6"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7326,7 +7326,7 @@
 							)
 						)
 					)
-					(number "5"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7344,7 +7344,7 @@
 							)
 						)
 					)
-					(number "4"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7362,7 +7362,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7380,7 +7380,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7398,7 +7398,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -11741,6 +11741,16 @@
 		)
 		(uuid "e9d244aa-4aa9-45ef-af0d-bdce0ab5801f")
 	)
+	(label "LED+"
+		(at 104.14 116.84 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "eb02163b-d638-4234-b815-1e2141633f3f")
+	)
 	(label "LED_PWM"
 		(at 181.61 153.67 0)
 		(effects
@@ -11750,6 +11760,16 @@
 			(justify left bottom)
 		)
 		(uuid "f0bebe80-4708-44da-958b-e2bb0bb97d55")
+	)
+	(label "LED-"
+		(at 104.14 135.89 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f1154d70-68d2-425b-937c-fec5cbdf3a3c")
 	)
 	(label "DISP_BUSY"
 		(at 219.71 123.19 180)
@@ -14810,7 +14830,7 @@
 		(pin "5"
 			(uuid "b1e41d0b-71a6-4f04-86a9-23939bc4f00b")
 		)
-		(pin "6"
+		(pin "1"
 			(uuid "589c2804-893e-4d43-b7b7-fb2b1a10f6ac")
 		)
 		(pin "2"
@@ -14819,7 +14839,7 @@
 		(pin "4"
 			(uuid "b40ebfc1-ded2-4e95-9030-c685082f179d")
 		)
-		(pin "1"
+		(pin "6"
 			(uuid "22d041ac-bba0-495b-8f94-43dac979c388")
 		)
 		(pin "3"
