@@ -9,9 +9,6 @@ C6,1uF,C_0603_1608Metric,81.6,-120.2,270.0,bottom
 C7,1uF,C_0603_1608Metric,83.9,-116.9,270.0,bottom
 C8,1uF,C_0603_1608Metric,83.9,-120.2,270.0,bottom
 C9,1uF,C_0603_1608Metric,86.4,-120.2,270.0,bottom
-D1,MBR0530,D_SOD-123,75.1,-114.6,180.0,bottom
-D2,MBR0530,D_SOD-123,69.4,-112.9,180.0,bottom
-D3,MBR0530,D_SOD-123,75.1,-117.1,0.0,bottom
 FL1,~,Hirose_FH12-6S-0.5SH_1x06-1MP_P0.50mm_Horizontal,90.5,-112.2,0.0,bottom
 P1,~,Hirose_FH12-24S-0.5SH_1x24-1MP_P0.50mm_Horizontal,78.85,-126.7,0.0,bottom
 R1,1M,R_0603_1608Metric,68.0,-125.1,0.0,bottom
@@ -22,5 +19,3 @@ R7,10k,R_0603_1608Metric,68.5,-101.175,270.0,bottom
 R8,10k,R_0603_1608Metric,71.5,-101.175,270.0,bottom
 R9,10k,R_0603_1608Metric,74.5,-101.25,270.0,bottom
 TS1,~,Hirose_FH12-6S-0.5SH_1x06-1MP_P0.50mm_Horizontal,134.0,-97.2,0.0,bottom
-U1,TPS61165DBV,SOT-23-6,90.5,-105.25,270.0,bottom
-U3,DS18B20Z,SOIC-8_3.9x4.9mm_P1.27mm,76.5,-76.25,180.0,bottom

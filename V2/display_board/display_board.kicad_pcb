@@ -11888,11 +11888,23 @@
 				(justify mirror)
 			)
 		)
+		(property "LCSC" ""
+			(at 0 0 0)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "6ce7b806-ae13-4786-acc7-a891a05bb2e4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Diode_SMD:D_SOD-123")
 		(path "/06c7ee9d-93f0-415c-bec4-df02c75a8dc0")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -2.36 -1)
 			(end 1.65 -1)
@@ -12578,7 +12590,7 @@
 		(path "/d7ed308f-a946-402a-b1cd-c025b00e6541")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -0.91 1.56)
 			(end 0.91 1.56)
@@ -16349,7 +16361,7 @@
 		(path "/86812abd-1ced-4d0a-94bc-1c9c7f518331")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -2.06 -2.56)
 			(end -2.06 -2.465)
@@ -17141,7 +17153,7 @@
 				(justify mirror)
 			)
 		)
-		(property "LCSC" "C77336"
+		(property "LCSC" ""
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -17157,7 +17169,7 @@
 		(path "/d8d5c3d6-00ff-4d97-988d-942196365281")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -2.36 -1)
 			(end 1.65 -1)
@@ -19571,11 +19583,23 @@
 				(justify mirror)
 			)
 		)
+		(property "LCSC" ""
+			(at 0 0 0)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "0cda8eed-3d27-4f8a-a4e6-916434aafb4e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Diode_SMD:D_SOD-123")
 		(path "/e7c0cfb5-283d-4459-9310-8831c9d97a9f")
 		(sheetname "/")
 		(sheetfile "display_board.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -2.36 1)
 			(end 1.65 1)
@@ -20820,18 +20844,6 @@
 			(font
 				(size 1.5 1.5)
 				(thickness 0.1875)
-			)
-			(justify bottom)
-		)
-	)
-	(gr_text "JLCJLCJLCJLC"
-		(at 100 71.25 0)
-		(layer "F.SilkS")
-		(uuid "534734c6-e0da-4375-9402-54cf66dd0df3")
-		(effects
-			(font
-				(size 1.25 1.25)
-				(thickness 0.125)
 			)
 			(justify bottom)
 		)
