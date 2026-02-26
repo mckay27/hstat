@@ -12118,7 +12118,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_FFC-FPC:Hirose_FH12-24S-0.5SH_1x24-1MP_P0.50mm_Horizontal"
+		(property "Footprint" "MH_connectors:AFC24-S24FIA-00"
 			(at 116.84 58.42 0)
 			(effects
 				(font
@@ -14778,7 +14778,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_FFC-FPC:Hirose_FH12-6S-0.5SH_1x06-1MP_P0.50mm_Horizontal"
+		(property "Footprint" "MH_connectors:AFC24-S06FIA-00"
 			(at 50.8 184.15 0)
 			(effects
 				(font
@@ -15589,7 +15589,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_FFC-FPC:Hirose_FH12-6S-0.5SH_1x06-1MP_P0.50mm_Horizontal"
+		(property "Footprint" "MH_connectors:AFC24-S06FIA-00"
 			(at 111.76 132.08 0)
 			(effects
 				(font
