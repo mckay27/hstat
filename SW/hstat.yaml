@@ -1,0 +1,256 @@
+#------------------------------------------------------------------#
+# hstat.yaml
+#
+# Description: configuration package for hstat version 2.0
+# Created on: 2026-04-03
+# Author: McKay Humpherys
+#------------------------------------------------------------------#
+
+#------------------------------------------------------------------#
+# Default substitutions
+#------------------------------------------------------------------#
+substitutions:
+  name: "hstat"
+  friendly_name: "hstat"
+
+#------------------------------------------------------------------#
+# Microcontroller and framework configuration
+#------------------------------------------------------------------#
+esphome:
+  name: ${name}
+  friendly_name: ${friendly_name}
+  on_boot:
+    then:
+      pcf8563.read_time:
+
+esp32:
+  variant: esp32s3
+  framework:
+    type: esp-idf
+    advanced:
+      enable_idf_experimental_features: True
+  flash_size: 32MB
+  cpu_frequency: 240MHz
+
+psram:
+  mode: octal
+  speed: 80MHz
+
+#------------------------------------------------------------------#
+# Low level interfaces
+#  - i2c
+#  - one wire
+#  - uart
+#  - spi
+#------------------------------------------------------------------#
+i2c:
+  sda: GPIO1
+  scl: GPIO2
+  scan: False
+  id: i2c_bus
+  sda_pullup_enabled: False
+  scl_pullup_enabled: False
+  frequency: 400kHz
+
+one_wire:
+  - platform: gpio
+    pin: GPIO38
+
+uart:
+  tx_pin: GPIO43
+  rx_pin: GPIO44
+  baud_rate: 115200
+  parity: NONE
+  stop_bits: 1
+
+spi:
+  clk_pin: GPIO12
+  mosi_pin: GPIO11
+
+#------------------------------------------------------------------#
+# Sensors
+#  - ld2412 mmwave presence sensor
+#  - pcf8463 RTC
+#  - max17043 fuel gauge
+#  - dallas temp sensors
+#  - sht4x temp and humidity sensor
+#  - ltr_als_ps ambient light sensor
+#------------------------------------------------------------------#
+ld2412:
+
+sensor:
+  - platform: max17043
+    id: max17043_id
+    i2c_id: i2c_bus
+    battery_voltage:
+      name: "Battery Voltage"
+    battery_level:
+      name: "Battery"
+  - platform: dallas_temp
+    name: "temp1"
+    index: 0
+  - platform: dallas_temp
+    name: "temp2"
+    index: 1
+  - platform: dallas_temp
+    name: "temp3"
+    index: 2
+  - platform: sht4x
+    temperature:
+      name: "Temp"
+    humidity:
+      name: "Humidity"
+    address: 0x44
+    i2c_id: i2c_bus
+    update_interval: 1s
+  - platform: ltr_als_ps
+    update_interval: 1s
+    ambient_light: "Ambient Light"
+    type: ALS
+
+#------------------------------------------------------------------#
+# Inputs
+#   - presence and motion from ld2412
+#   - 4 buttons
+#------------------------------------------------------------------#
+binary_sensor:
+  - platform: ld2412
+    has_target:
+      name: Presence
+    has_moving_target:
+      name: Moving Target
+    has_still_target:
+      name: Still Target
+    dynamic_background_correction_status:
+      name: Dynamic Background Correction Status
+  - platform: gpio
+    pin:
+      number: GPIO42
+      inverted: true
+    name: "BTN 1"
+  - platform: gpio
+    pin:
+      number: GPIO41
+      inverted: true
+    name: "BTN 2"
+  - platform: gpio
+    pin:
+      number: GPIO40
+      inverted: true
+    name: "BTN 3"
+  - platform: gpio
+    pin:
+      number: GPIO39
+      inverted: true
+    name: "BTN 4"
+
+#------------------------------------------------------------------#
+# Outputs
+#  - Relay controls
+#  - LED indicator
+#  - Display Front Light
+#------------------------------------------------------------------#
+switch:
+  - platform: gpio
+    pin: GPIO21
+    id: relay1_set
+    name: "Relay 1 Set"
+    on_turn_on:
+      - delay: 100ms
+      - switch.turn_off: relay1_set
+  - platform: gpio
+    pin: GPIO47
+    id: relay1_reset
+    name: "Relay 1 Reset"
+    on_turn_on:
+      - delay: 100ms
+      - switch.turn_off: relay1_reset
+  - platform: gpio
+    pin: GPIO48
+    id: relay2_set
+    name: "Relay 2 Set"
+    on_turn_on:
+      - delay: 100ms
+      - switch.turn_off: relay2_set
+  - platform: gpio
+    pin: GPIO45
+    id: relay2_reset
+    name: "Relay 2 Reset"
+    on_turn_on:
+      - delay: 100ms
+      - switch.turn_off: relay2_reset
+
+output:
+  - platform: ledc
+    pin: GPIO7
+    id: front_led
+  - platform: ledc
+    pin: GPIO13
+    id: front_light
+    frequency: 100kHz
+
+light:
+  - platform: esp32_rmt_led_strip
+    rgb_order: RGB
+    pin: GPIO14
+    num_leds: 10
+    chipset: SK6812
+    name: "rgb_led"
+  - platform: monochromatic
+    output: front_led
+    name: "Front LED"
+    restore_mode: RESTORE_DEFAULT_ON
+  - platform: monochromatic
+    output: front_light
+    name: "Front Light"
+
+#------------------------------------------------------------------#
+# Time
+#------------------------------------------------------------------#
+time:
+  - platform: pcf8563
+    id: pcf8563_time
+    address: 0x51
+  - platform: homeassistant
+    on_time_sync:
+      then:
+        pcf8563.write_time:
+
+#------------------------------------------------------------------#
+# Display
+#  - ft63x6 touch controller
+#  - GDEY042T81 epaper display
+#------------------------------------------------------------------#
+touchscreen:
+  - platform: ft63x6
+    interrupt_pin: GPIO17
+    reset_pin: GPIO16
+    on_touch:
+      - component.update: epaper
+      - lambda: |-
+          ESP_LOGI("Touch", "x=%d, y=%d, x_raw=%d, y_raw=%d", touch.x, touch.y, touch.x_raw, touch.y_raw);
+
+display:
+  - platform: waveshare_epaper
+    cs_pin: GPIO10
+    dc_pin: GPIO9
+    busy_pin: GPIO8
+    reset_pin: GPIO18
+    model: gdey042t81
+    id: epaper
+    auto_clear_enabled: true
+    full_update_every: 1
+    update_interval: 2s
+    lambda: |-
+      static int i = 0;
+      it.printf( 0, 0, id(roboto), "TEST TEXT: %d", i);
+      i++;
+
+#------------------------------------------------------------------#
+# Fonts
+#------------------------------------------------------------------#
+font:
+  # gfonts://family[@weight]
+  - file: "gfonts://Roboto"
+    id: roboto
+    size: 20
