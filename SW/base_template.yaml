@@ -1,0 +1,47 @@
+esphome:
+  name: hstat-1
+  friendly_name: hstat-1
+  on_boot:
+    then:
+      pcf8563.read_time:
+
+esp32:
+  variant: esp32s3
+  framework:
+    type: esp-idf
+    advanced:
+      enable_idf_experimental_features: True
+  flash_size: 32MB
+  cpu_frequency: 240MHz
+
+psram:
+  mode: octal
+  speed: 80MHz
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "plAfzT7EYi7PXKJfLM/r8IJdNEoo7Yzjx7kTeSzxspw="
+
+ota:
+  - platform: esphome
+    password: "a950c760978045a0ccadd73815fd8f92"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Hstat-1 Fallback Hotspot"
+    password: "wv6j4i4fBvtx"
+
+captive_portal:
+
+packages:
+  hstat_config:
+    url: https://github.com/mckay27/hstat
+    files: [SW/hstat.yaml]

@@ -36,6 +36,8 @@ psram:
   mode: octal
   speed: 80MHz
 
+logger:
+
 #------------------------------------------------------------------#
 # Low level interfaces
 #  - i2c
