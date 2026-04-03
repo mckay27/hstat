@@ -1,25 +1,13 @@
-esphome:
-  name: hstat-1
-  friendly_name: hstat-1
-  on_boot:
-    then:
-      pcf8563.read_time:
-
-esp32:
-  variant: esp32s3
-  framework:
-    type: esp-idf
-    advanced:
-      enable_idf_experimental_features: True
-  flash_size: 32MB
-  cpu_frequency: 240MHz
-
-psram:
-  mode: octal
-  speed: 80MHz
-
-# Enable logging
-logger:
+packages:
+  hstat_config:
+    url: https://github.com/mckay27/hstat
+    files:
+      - path: SW/hstat.yaml
+        vars:
+          name: "hstat-1"
+          friendly_name: "hstat"
+    ref: status_page
+    refresh: 1s
 
 # Enable Home Assistant API
 api:
@@ -40,8 +28,3 @@ wifi:
     password: "wv6j4i4fBvtx"
 
 captive_portal:
-
-packages:
-  hstat_config:
-    url: https://github.com/mckay27/hstat
-    files: [SW/hstat.yaml]

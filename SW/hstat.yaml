@@ -275,7 +275,7 @@ display:
     id: epaper
     auto_clear_enabled: true
     full_update_every: 1
-    update_interval: 2s
+    update_interval: 15s
     lambda: |-
       // ── Dividers ──────────────────────────────────────────────────────────
       it.line(0, 29, 399, 29);
