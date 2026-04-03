@@ -86,28 +86,37 @@ sensor:
     i2c_id: i2c_bus
     battery_voltage:
       name: "Battery Voltage"
+      id: battery_voltage_sensor
     battery_level:
       name: "Battery"
+      id: battery_level_sensor
   - platform: dallas_temp
     name: "temp1"
+    id: temp1_sensor
     index: 0
   - platform: dallas_temp
     name: "temp2"
+    id: temp2_sensor
     index: 1
   - platform: dallas_temp
     name: "temp3"
+    id: temp3_sensor
     index: 2
   - platform: sht4x
     temperature:
       name: "Temp"
+      id: sht_temp
     humidity:
       name: "Humidity"
+      id: sht_humidity
     address: 0x44
     i2c_id: i2c_bus
     update_interval: 1s
   - platform: ltr_als_ps
     update_interval: 1s
-    ambient_light: "Ambient Light"
+    ambient_light:
+      name: "Ambient Light"
+      id: ambient_light_sensor
     type: ALS
 
 #------------------------------------------------------------------#
@@ -119,10 +128,13 @@ binary_sensor:
   - platform: ld2412
     has_target:
       name: Presence
+      id: presence_sensor
     has_moving_target:
       name: Moving Target
+      id: moving_target_sensor
     has_still_target:
       name: Still Target
+      id: still_target_sensor
     dynamic_background_correction_status:
       name: Dynamic Background Correction Status
   - platform: gpio
@@ -156,31 +168,49 @@ switch:
   - platform: gpio
     pin: GPIO21
     id: relay1_set
-    name: "Relay 1 Set"
+    internal: true
     on_turn_on:
       - delay: 100ms
       - switch.turn_off: relay1_set
   - platform: gpio
     pin: GPIO47
     id: relay1_reset
-    name: "Relay 1 Reset"
+    internal: true
     on_turn_on:
       - delay: 100ms
       - switch.turn_off: relay1_reset
   - platform: gpio
     pin: GPIO48
     id: relay2_set
-    name: "Relay 2 Set"
+    internal: true
     on_turn_on:
       - delay: 100ms
       - switch.turn_off: relay2_set
   - platform: gpio
     pin: GPIO45
     id: relay2_reset
-    name: "Relay 2 Reset"
+    internal: true
     on_turn_on:
       - delay: 100ms
       - switch.turn_off: relay2_reset
+  - platform: template
+    name: "Relay 1"
+    id: relay1
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_OFF
+    turn_on_action:
+      - switch.turn_on: relay1_set
+    turn_off_action:
+      - switch.turn_on: relay1_reset
+  - platform: template
+    name: "Relay 2"
+    id: relay2
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_OFF
+    turn_on_action:
+      - switch.turn_on: relay2_set
+    turn_off_action:
+      - switch.turn_on: relay2_reset
 
 output:
   - platform: ledc
@@ -198,13 +228,16 @@ light:
     num_leds: 10
     chipset: SK6812
     name: "rgb_led"
+    id: rgb_led_light
   - platform: monochromatic
     output: front_led
     name: "Front LED"
+    id: front_led_light
     restore_mode: RESTORE_DEFAULT_ON
   - platform: monochromatic
     output: front_light
     name: "Front Light"
+    id: front_light_light
 
 #------------------------------------------------------------------#
 # Time
@@ -242,17 +275,147 @@ display:
     id: epaper
     auto_clear_enabled: true
     full_update_every: 1
-    update_interval: 2s
+    update_interval: 15s
     lambda: |-
-      static int i = 0;
-      it.printf( 0, 0, id(roboto), "TEST TEXT: %d", i);
-      i++;
+      // ── Dividers ──────────────────────────────────────────────────────────
+      it.line(0, 29, 399, 29);
+      it.line(0, 168, 399, 168);
+      it.line(200, 29, 200, 299);
+
+      // ── Header: Time & Date ───────────────────────────────────────────────
+      auto now = id(pcf8563_time).now();
+      it.printf(5, 5, id(mdi_icons), "\U000F0954");
+      if (now.is_valid()) {
+        it.strftime(28, 1, id(font_large), "%H:%M", now);
+        it.strftime(130, 9, id(font_medium), "%a  %b %d  %Y", now);
+      } else {
+        it.print(28, 1, id(font_large), "--:--");
+        it.print(130, 9, id(font_medium), "Time not synced");
+      }
+
+      // ── TOP LEFT: Temperatures ────────────────────────────────────────────
+      it.print(5, 31, id(font_small), "TEMPERATURES");
+
+      it.printf(5, 47, id(mdi_icons), "\U000F050F");
+      if (!isnan(id(sht_temp).state))
+        it.printf(26, 49, id(font_medium), "SHT: %.1f°C", id(sht_temp).state);
+      else
+        it.print(26, 49, id(font_medium), "SHT: ---");
+
+      it.printf(5, 66, id(mdi_icons), "\U000F07C1");
+      if (!isnan(id(sht_humidity).state))
+        it.printf(26, 68, id(font_medium), "Hum: %.1f%%", id(sht_humidity).state);
+      else
+        it.print(26, 68, id(font_medium), "Hum: ---");
+
+      it.print(5, 86, id(font_small), "DALLAS");
+
+      it.printf(5, 99, id(mdi_icons), "\U000F050F");
+      if (!isnan(id(temp1_sensor).state))
+        it.printf(26, 101, id(font_medium), "T1: %.1f°C", id(temp1_sensor).state);
+      else
+        it.print(26, 101, id(font_medium), "T1: ---");
+
+      it.printf(5, 118, id(mdi_icons), "\U000F050F");
+      if (!isnan(id(temp2_sensor).state))
+        it.printf(26, 120, id(font_medium), "T2: %.1f°C", id(temp2_sensor).state);
+      else
+        it.print(26, 120, id(font_medium), "T2: ---");
+
+      it.printf(5, 137, id(mdi_icons), "\U000F050F");
+      if (!isnan(id(temp3_sensor).state))
+        it.printf(26, 139, id(font_medium), "T3: %.1f°C", id(temp3_sensor).state);
+      else
+        it.print(26, 139, id(font_medium), "T3: ---");
+
+      // ── TOP RIGHT: Presence & Relays ──────────────────────────────────────
+      it.print(205, 31, id(font_small), "STATUS");
+
+      it.printf(205, 47, id(mdi_icons), "\U000F0A6E");
+      it.printf(226, 49, id(font_medium), "Presence: %s",
+        id(presence_sensor).state ? "YES" : "NO ");
+
+      it.printf(205, 86, id(mdi_icons),
+        id(relay1).state ? "\U000F05C0" : "\U000F05C1");
+      it.printf(226, 88, id(font_medium), "Relay 1:  %s",
+        id(relay1).state ? "ON " : "OFF");
+
+      it.printf(205, 118, id(mdi_icons),
+        id(relay2).state ? "\U000F05C0" : "\U000F05C1");
+      it.printf(226, 120, id(font_medium), "Relay 2:  %s",
+        id(relay2).state ? "ON " : "OFF");
+
+      // ── BOTTOM LEFT: Battery & Ambient Light ──────────────────────────────
+      it.print(5, 170, id(font_small), "POWER");
+
+      it.printf(5, 186, id(mdi_icons), "\U000F007F");
+      if (!isnan(id(battery_level_sensor).state) &&
+          !isnan(id(battery_voltage_sensor).state))
+        it.printf(26, 188, id(font_medium), "%.0f%%  %.2fV",
+          id(battery_level_sensor).state, id(battery_voltage_sensor).state);
+      else
+        it.print(26, 188, id(font_medium), "--- / --.-V");
+
+      it.print(5, 210, id(font_small), "AMBIENT");
+
+      it.printf(5, 224, id(mdi_icons), "\U000F0599");
+      if (!isnan(id(ambient_light_sensor).state))
+        it.printf(26, 226, id(font_medium), "%.0f lux", id(ambient_light_sensor).state);
+      else
+        it.print(26, 226, id(font_medium), "--- lux");
+
+      // ── BOTTOM RIGHT: Lights ──────────────────────────────────────────────
+      it.print(205, 170, id(font_small), "LIGHTS");
+
+      it.printf(205, 186, id(mdi_icons),
+        id(front_led_light).current_values.is_on() ? "\U000F0335" : "\U000F0336");
+      if (id(front_led_light).current_values.is_on())
+        it.printf(226, 188, id(font_medium), "Front LED: %.0f%%",
+          id(front_led_light).current_values.get_brightness() * 100.0f);
+      else
+        it.print(226, 188, id(font_medium), "Front LED: OFF");
+
+      it.printf(205, 206, id(mdi_icons),
+        id(front_light_light).current_values.is_on() ? "\U000F0335" : "\U000F0336");
+      if (id(front_light_light).current_values.is_on())
+        it.printf(226, 208, id(font_medium), "Frnt Lgt:  %.0f%%",
+          id(front_light_light).current_values.get_brightness() * 100.0f);
+      else
+        it.print(226, 208, id(font_medium), "Frnt Lgt:  OFF");
+
+      it.printf(205, 226, id(mdi_icons), "\U000F0EBB");
+      it.printf(226, 228, id(font_medium), "RGB Strip: %s",
+        id(rgb_led_light).current_values.is_on() ? "ON " : "OFF");
 
 #------------------------------------------------------------------#
 # Fonts
 #------------------------------------------------------------------#
 font:
-  # gfonts://family[@weight]
+  - file: "gfonts://Roboto@700"
+    id: font_large
+    size: 26
+
   - file: "gfonts://Roboto"
-    id: roboto
-    size: 20
+    id: font_medium
+    size: 14
+    glyphs: " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~°"
+
+  - file: "gfonts://Roboto"
+    id: font_small
+    size: 12
+
+  - file: "https://github.com/Templarian/MaterialDesign-Webfont/raw/master/fonts/materialdesignicons-webfont.ttf"
+    id: mdi_icons
+    size: 18
+    glyphs:
+      - "\U000F0954" # mdi-clock-outline
+      - "\U000F050F" # mdi-thermometer
+      - "\U000F07C1" # mdi-water-percent
+      - "\U000F0A6E" # mdi-motion-sensor
+      - "\U000F05C0" # mdi-toggle-switch
+      - "\U000F05C1" # mdi-toggle-switch-off
+      - "\U000F0335" # mdi-lightbulb
+      - "\U000F0336" # mdi-lightbulb-outline
+      - "\U000F0599" # mdi-weather-sunny
+      - "\U000F007F" # mdi-battery
+      - "\U000F0EBB" # mdi-led-strip-variant
