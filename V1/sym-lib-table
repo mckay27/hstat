@@ -1,6 +1,0 @@
-(sym_lib_table
-  (version 7)
-  (lib (name "ESP-32")(type "Legacy")(uri "${KIPRJMOD}/lib/ESP32-WROVER-E-main/EspressIf.lib")(options "")(descr ""))
-  (lib (name "ST7796S-module")(type "KiCad")(uri "${KIPRJMOD}/lib/ST7796S-module/ST7796S-module.kicad_sym")(options "")(descr ""))
-  (lib (name "SY8089")(type "KiCad")(uri "${KIPRJMOD}/lib/ul_SY8089AAAC/KiCADv6/2025-01-31_06-12-01.kicad_sym")(options "")(descr ""))
-)
